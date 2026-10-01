@@ -1,0 +1,4 @@
+Título: O administrador como intermediário da implementação
+Arquivo principal: index.html
+Tipo: apresentação HTML estática
+Dependências externas: nenhuma
