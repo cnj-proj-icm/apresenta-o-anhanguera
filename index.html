@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Papel do Administrador na Implementação de Políticas Públicas · Igor Caires Machado</title>
+<meta name="description" content="Palestra no IV Congresso Científico da Anhanguera Asa Norte, 07 de outubro de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:#0B1533;overflow:hidden}
+h1,h2,h3,p,li{overflow-wrap:break-word}
+h1,h2,h3{font-weight:600}
+ul{padding-left:1.1em}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center}
+.slide{position:absolute;inset:0;display:none}
+.slide.active{display:block}
+.slide>section{position:relative;width:1920px;height:1080px;overflow:hidden}
+#bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:8px 16px;font:14px Arial,sans-serif;color:#C9D3E6;opacity:0;transition:opacity .3s}
+body:hover #bar{opacity:1}
+#bar button{background:#1C2E5E;color:#F6F4EF;border:0;border-radius:6px;padding:6px 14px;font:14px Arial,sans-serif;cursor:pointer}
+#notes{display:none;position:fixed;left:0;right:0;bottom:44px;max-height:30vh;overflow:auto;background:#F6F4EF;color:#0F1E46;font:18px/1.5 Arial,sans-serif;padding:16px 24px;border-top:4px solid #E8591E}
+body.show-notes #notes{display:block}
+@media print{
+  @page{size:1920px 1080px;margin:0}
+  html,body{overflow:visible;background:none;height:auto}
+  #stage{position:static;transform:none!important;width:1920px;height:auto}
+  .slide{position:relative;display:block;page-break-after:always;break-after:page}
+  #bar,#notes{display:none!important}
+}
+</style>
+</head>
+<body>
+<div id="stage">
+<div class="slide" data-id="cover">
+<section id="cover" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:row;gap:96px;align-items:center">
+<div style="flex:1;display:flex;flex-direction:column;gap:40px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">IV Congresso Científico · Anhanguera Asa Norte</p>
+<h1 style="font-family:'Oswald', Arial, sans-serif;font-size:88px;font-weight:600;line-height:1.08;text-transform:uppercase;color:#F6F4EF">O papel do administrador na implementação de políticas públicas</h1>
+<p style="font-size:32px;line-height:1.4;color:#C9D3E6">Pesquisa empírica como ferramenta de gestão e de carreira</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:32px;font-weight:700;color:#F6F4EF">Igor Caires Machado</p>
+<p style="font-size:26px;color:#C9D3E6">Curso de Administração · 07 de outubro de 2026</p>
+</div>
+</div>
+<img src="assets/igor.jpg" alt="Retrato de Igor Caires Machado" style="width:480px;height:480px;object-fit:cover;border-radius:50%;border:10px solid #E8591E">
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Agradecimento à coordenação do curso</li><li>Tema: implementação de políticas públicas</li><li>Pesquisa empírica como ferramenta de carreira</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="perfil">
+<section id="perfil" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Trajetória</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Da arquitetura à gestão e à pesquisa em políticas públicas</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#B8410E">UFBA · 2007</p>
+<p style="font-size:28px;line-height:1.4;color:#0F1E46">Graduação em Arquitetura e Urbanismo</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#B8410E">TJBA</p>
+<p style="font-size:28px;line-height:1.4;color:#0F1E46">Liderança administrativa no Tribunal de Justiça da Bahia</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#B8410E">UCES · 2024</p>
+<p style="font-size:28px;line-height:1.4;color:#0F1E46">Doutorado em Ciências Empresariais e Sociais, Buenos Aires</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#F2884F">CNJ</p>
+<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Analista Judiciário no Conselho Nacional de Justiça</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#F2884F">ENAJU</p>
+<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#F2884F">ENAP · 2025–2026</p>
+<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Pós-doutorado em Governança e Avaliação de Políticas Públicas</p>
+</div>
+</div>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Formação em arquitetura e urbanismo</li><li>Gestão pública no TJBA, no CNJ e na ENAJU</li><li>Doutorado na UCES e pós-doutorado na ENAP</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="cena">
+<section id="cena" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px;justify-content:center">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Ponto de partida</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.1;color:#0F1E46">Uma política bem desenhada pode travar no balcão.</h2>
+<p style="font-size:32px;line-height:1.45;color:#3B4560;width:1300px">A norma está publicada. O orçamento existe. O cidadão chega e não encontra a fila certa, a sala adequada ou a informação de que precisa.</p>
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:600;color:#B8410E">Onde a política pública acontece?</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Política bem desenhada que trava no balcão</li><li>Implementação como problema (Pressman; Wildavsky, 1973)</li><li>Pergunta-guia: onde a política acontece?</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="tese">
+<section id="tese" style="background:#E8591E;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px;justify-content:center">
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0F1E46">A tese desta palestra</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:80px;font-weight:700;line-height:1.1;color:#0F1E46">O administrador faz a política pública acontecer quando organiza o lugar em que ela encontra o cidadão.</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">1</p>
+<p style="font-size:28px;line-height:1.4;color:#F6F4EF">A implementação acontece em lugares concretos: balcões, sistemas, filas e formulários.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">2</p>
+<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Esses lugares podem ser lidos e redesenhados com método.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">3</p>
+<p style="font-size:28px;line-height:1.4;color:#F6F4EF">A pesquisa empírica dá ao administrador essa capacidade.</p>
+</div>
+</div>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#0F1E46;padding:16px 24px;border-left:6px solid #F6F4EF;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#F6F4EF"><li>A política acontece em lugares concretos</li><li>Esses lugares podem ser lidos e redesenhados</li><li>A pesquisa como capacidade do administrador</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="implementacao">
+<section id="implementacao" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Implementação</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Entre a decisão e o resultado existe a execução</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:40px;border-top:8px solid #E8591E;border-radius:8px;box-shadow:0 4px 16px rgba(15,30,70,0.08)">
+<h3 style="font-size:32px;font-weight:700;color:#0F1E46">Pressman e Wildavsky, 1973</h3>
+<p style="font-size:28px;line-height:1.4;color:#3B4560">A distância entre o que se decide em Washington e o que acontece em Oakland.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:40px;border-top:8px solid #E8591E;border-radius:8px;box-shadow:0 4px 16px rgba(15,30,70,0.08)">
+<h3 style="font-size:32px;font-weight:700;color:#0F1E46">Lipsky, 1980</h3>
+<p style="font-size:28px;line-height:1.4;color:#3B4560">A política real é produzida na linha de frente, sob pressão de demanda e escassez de recursos.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:40px;border-top:8px solid #E8591E;border-radius:8px;box-shadow:0 4px 16px rgba(15,30,70,0.08)">
+<h3 style="font-size:32px;font-weight:700;color:#0F1E46">Hill e Hupe, 2022</h3>
+<p style="font-size:28px;line-height:1.4;color:#3B4560">Organização, discricionariedade e condições institucionais moldam a ação pública.</p>
+</div>
+</div>
+<p style="font-size:32px;font-weight:700;color:#0F1E46">É nesse intervalo que o administrador trabalha.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Decisão e execução (Pressman; Wildavsky, 1973)</li><li>Linha de frente e discricionariedade (Lipsky, 1980)</li><li>Condições institucionais (Hill; Hupe, 2022)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="onde">
+<section id="onde" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Onde a política acontece</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">A política ganha forma em lugares concretos</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:24px">
+<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Balcões</p></div>
+<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Salas de atendimento</p></div>
+<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Formulários</p></div>
+<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Sistemas</p></div>
+<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Filas</p></div>
+<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Interfaces</p></div>
+<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Corredores</p></div>
+<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Plataformas</p></div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3B4560">Nesses arranjos, a norma vira prática, o trabalho se organiza e o cidadão forma sua experiência com o Estado.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Ambiente e serviço: servicescape (Bitner, 1992)</li><li>Custos administrativos (Herd; Moynihan, 2019)</li><li>Instrumentos de política (Lascoumes; Le Galès, 2007)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="lacuna">
+<section id="lacuna" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">O que a pesquisa mostra</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">A literatura trata o espaço de forma fragmentada</h2>
+</div>
+<table style="font-size:26px;color:#0F1E46;border-radius:8px">
+<tr style="background:#0F1E46"><th style="width:26%;color:#F6F4EF;padding:16px 20px">Frente de estudo</th><th style="width:52%;color:#F6F4EF">O que indicou</th><th style="width:22%;color:#F6F4EF">Estágio</th></tr>
+<tr style="background:#FCFBF8"><td>Política judiciária</td><td>Termos de infraestrutura física ausentes dos núcleos temáticos da literatura</td><td>Resultado reproduzível</td></tr>
+<tr style="background:#EFEBE3"><td>Implementação</td><td>Proporção muito baixa de trabalhos que tratam o espaço como variável ativa</td><td>Preliminar</td></tr>
+<tr style="background:#FCFBF8"><td>Evidências empíricas</td><td>Evidência densa só no trabalho dos servidores, com lacunas nas demais dimensões</td><td>Preliminar</td></tr>
+<tr style="background:#EFEBE3"><td>Sociomaterialidade</td><td>Ligação escassa com o espaço dos serviços públicos</td><td>Preliminar</td></tr>
+</table>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Revisão de escopo (Tricco et al., 2018)</li><li>Dispersão entre periódicos (Bradford, 1934)</li><li>Formação de um campo científico (Whitley, 1984)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="posdoc">
+<section id="posdoc" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:row;gap:96px;align-items:center">
+<img src="assets/capa-posdoc.jpg" alt="Capa do relatório do Ano 1 do pós-doutorado: Das Arquiteturas Judiciárias às Arenas Sociomateriais de Implementação" style="width:532px;height:752px;object-fit:cover;border-radius:8px;box-shadow:0 12px 40px rgba(15,30,70,0.25)">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Pesquisa de pós-doutorado · ENAP</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Das arquiteturas judiciárias às arenas sociomateriais de implementação</h2>
+<p style="font-size:32px;line-height:1.45;color:#3B4560">Desenvolvimento do framework ARENAS e sua ampliação pela governança regulatória.</p>
+<p style="font-size:26px;line-height:1.45;color:#3B4560">Linha de Governança e práticas de avaliação de políticas públicas. Supervisão da Prof.ª Dr.ª Regina Luna Santos de Souza.</p>
+</div>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Origem: arquitetura judiciária e escala ARQJUD</li><li>O framework ARENAS e sua operacionalização</li><li>Ampliação pela governança regulatória</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="arena">
+<section id="arena" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px;justify-content:center">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Conceito central · Pesquisa de pós-doutorado, ENAP</p>
+<div style="display:flex;flex-direction:column;gap:24px;border-left:12px solid #E8591E;padding:8px 0 8px 56px">
+<p style="font-size:44px;font-weight:500;line-height:1.35;color:#0F1E46">Uma <b>arena sociomaterial de implementação</b> é uma configuração situada de atores, prescrições institucionais, espaços, artefatos, tecnologias e infraestruturas por meio da qual uma política pública é interpretada, executada, negociada e experimentada.</p>
+</div>
+<p style="font-size:32px;line-height:1.45;color:#3B4560">Um prédio pode conter várias arenas. Uma arena pode atravessar prédios, plataformas e documentos.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Sociomaterialidade nas organizações (Orlikowski, 2007)</li><li>Imbricação entre humano e material (Leonardi, 2011)</li><li>Como delimitar uma arena: política e ponto de contato</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="componentes">
+<section id="componentes" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Framework ARENAS</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Cinco componentes, e a relação entre eles forma a arena</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #0F1E46">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Atores</h3>
+<p style="font-size:24px;line-height:1.4;color:#3B4560">Profissionais, cidadãos, gestores, intermediários</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #0F1E46">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Prescrições</h3>
+<p style="font-size:24px;line-height:1.4;color:#3B4560">Normas, regras, procedimentos, critérios de elegibilidade</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #E8591E">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Materialidades</h3>
+<p style="font-size:24px;line-height:1.4;color:#3B4560">Edifícios, salas, balcões, mobiliário, documentos</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #E8591E">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Tecnologias</h3>
+<p style="font-size:24px;line-height:1.4;color:#3B4560">Plataformas, sistemas, formulários, sinalização</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #0F1E46">
+<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Práticas</h3>
+<p style="font-size:24px;line-height:1.4;color:#3B4560">Esperar, circular, atender, decidir, adaptar</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.4;color:#3B4560">Um componente isolado não forma uma arena. O objeto de análise é o entrelaçamento.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Cinco grupos relacionais do framework</li><li>Mediação por artefatos (Engeström, 2001)</li><li>Configurações que se sedimentam (Leonardi, 2011)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="mecanismos">
+<section id="mecanismos" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Como o espaço participa</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Cinco mecanismos, com exemplos do Judiciário</h2>
+</div>
+<table style="font-size:24px;color:#0F1E46">
+<tr style="background:#0F1E46"><th style="width:24%;color:#F6F4EF;padding:12px 20px">Mecanismo</th><th style="width:34%;color:#F6F4EF">Pergunta</th><th style="width:42%;color:#F6F4EF">Exemplo</th></tr>
+<tr style="background:#FCFBF8"><td><b>M1</b> Instrumentação</td><td>Como a norma vira arranjo concreto?</td><td>Resolução de acessibilidade que vira, ou não, rampa e sinalização tátil</td></tr>
+<tr style="background:#EFEBE3"><td><b>M2</b> Mediação do trabalho</td><td>Como o arranjo organiza o trabalho?</td><td>Processos empilhados no corredor porque o arquivo fica em outro andar</td></tr>
+<tr style="background:#FCFBF8"><td><b>M3</b> Mediação da experiência</td><td>Como o lugar afeta a percepção de tratamento justo?</td><td>Bancada elevada na sala de audiência reforça a distância institucional</td></tr>
+<tr style="background:#EFEBE3"><td><b>M4</b> Legibilidade</td><td>A instituição é compreensível para quem chega?</td><td>Tribunal sem sinalização obriga o cidadão a perguntar várias vezes</td></tr>
+<tr style="background:#FCFBF8"><td><b>M5</b> Aprendizagem</td><td>As fricções chegam a quem decide?</td><td>Erros recorrentes do sistema eletrônico nunca notificados à gestão</td></tr>
+</table>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Norma que vira arranjo (Lascoumes; Le Galès, 2007)</li><li>Justiça procedimental (Tyler, 2003)</li><li>Aprendizagem organizacional (Argyris; Schön, 1978)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="copresenca">
+<section id="copresenca" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px;justify-content:center">
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">Um achado para o gestor</p>
+<p style="font-size:24px;font-weight:600;color:#0F1E46;background:#F2884F;padding:6px 20px;border-radius:999px">Proposição a testar</p>
+</div>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:88px;font-weight:600;line-height:1.1;color:#F6F4EF">A digitalização redistribui a materialidade da política pública</h2>
+<p style="font-size:32px;line-height:1.45;color:#C9D3E6;width:1400px">Quando as transações rotineiras migram para o digital, o prédio recebe menos pessoas. Os atendimentos que permanecem presenciais tendem a exigir mais coordenação, proteção e infraestrutura.</p>
+<p style="font-size:32px;font-weight:700;line-height:1.45;color:#F6F4EF;width:1400px">Consequência: a ocupação média perde força como indicador de valor público.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Digitalização e encontros complexos</li><li>Custos para o cidadão (Christensen et al., 2020)</li><li>Ocupação média como indicador de valor público</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="metodo">
+<section id="metodo" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Do conceito à prática</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Método ARENAS: seis lentes de diagnóstico</h2>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:20px">
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">A</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Arranjo espacial</p></div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">R</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Rotinas de trabalho</p></div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">E</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Experiência</p></div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">N</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Navegabilidade</p></div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">A</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Aprendizagem</p></div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#0F1E46;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">S</p><p style="font-size:32px;font-weight:600;color:#F6F4EF">Sociomaterialidade</p></div>
+</div>
+<div style="display:flex;flex-direction:row;gap:16px;align-items:center;flex-wrap:wrap">
+<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Observar</p>
+<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
+<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Diagnosticar</p>
+<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
+<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Redesenhar</p>
+<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
+<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Testar e avaliar</p>
+<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
+<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Aprender</p>
+</div>
+<p style="font-size:26px;color:#3B4560">Protótipo com baralho de 24 cartas, checklist bilíngue e ciclo de aplicação em cinco passos.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Seis lentes de diagnóstico</li><li>Ciclo: observar, diagnosticar, redesenhar</li><li>Gestão baseada em confiança (Torfing, 2023)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="olhar">
+<section id="olhar" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">O que muda no olhar do administrador</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Três perguntas para levar ao seu local de trabalho</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:32px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FCFBF8;padding:48px;border-radius:12px">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#E8591E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+<p style="font-size:36px;font-weight:600;line-height:1.3;color:#0F1E46">Onde a norma encontra o cidadão?</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FCFBF8;padding:48px;border-radius:12px">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#E8591E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M16 4a4 4 0 0 1 0 8"/><path d="M19 14a6 6 0 0 1 3 5v2"/></svg>
+<p style="font-size:36px;font-weight:600;line-height:1.3;color:#0F1E46">O que o arranjo facilita ou dificulta para a equipe?</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FCFBF8;padding:48px;border-radius:12px">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#E8591E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1V17h6v-.2c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z"/></svg>
+<p style="font-size:36px;font-weight:600;line-height:1.3;color:#0F1E46">As fricções do atendimento chegam a quem decide?</p>
+</div>
+</div>
+<p style="font-size:32px;line-height:1.45;color:#3B4560">Uma mesma política produz resultados distintos em lugares distintos. O framework ajuda a explicar variações que costumam ser atribuídas só à cultura organizacional.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>O ponto de contato entre norma e cidadão</li><li>Trabalho na linha de frente (Brodkin, 2011)</li><li>Fricção que vira aprendizagem (Dunlop; Radaelli, 2013)</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="carreira">
+<section id="carreira" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">Pesquisa e carreira</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F6F4EF">Seu local de trabalho é um campo de pesquisa</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">1</p>
+<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Observe</h3>
+<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Que problema se repete no seu trabalho?</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">2</p>
+<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Registre</h3>
+<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Anote casos, fluxos, reclamações e improvisos.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">3</p>
+<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Meça</h3>
+<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Use os dados administrativos que já existem.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
+<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">4</p>
+<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Escreva</h3>
+<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Transforme o achado em artigo, relatório ou proposta.</p>
+</div>
+</div>
+<p style="font-size:32px;font-weight:600;line-height:1.45;color:#F6F4EF">Quem pesquisa o próprio trabalho decide melhor e se diferencia na carreira.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>O local de trabalho como campo de pesquisa</li><li>Dados administrativos como fonte de evidência</li><li>Do achado ao artigo, ao relatório ou à proposta</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="rigor">
+<section id="rigor" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Rigor</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Cada resultado no seu estágio de maturidade</h2>
+</div>
+<div style="display:flex;flex-direction:row;gap:16px;align-items:end">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#E9EEF6;padding:28px;border-radius:12px;height:120px"><p style="font-size:28px;font-weight:700;color:#0F1E46">Proposição</p></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#D3DCEB;padding:28px;border-radius:12px;height:165px"><p style="font-size:28px;font-weight:700;color:#0F1E46">Evidência preliminar</p></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#AFC0DA;padding:28px;border-radius:12px;height:210px"><p style="font-size:28px;font-weight:700;color:#0F1E46">Manuscrito</p></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#2B4580;padding:28px;border-radius:12px;height:255px"><p style="font-size:28px;font-weight:700;color:#F6F4EF">Aceite</p></div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#0F1E46;padding:28px;border-radius:12px;height:300px"><p style="font-size:28px;font-weight:700;color:#F6F4EF">Publicação</p></div>
+</div>
+<p style="font-size:32px;line-height:1.45;color:#3B4560">Hoje o ARENAS é uma formulação teórica fundamentada. O segundo ano abre o teste empírico das proposições e a validação dos instrumentos.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Estágios de maturidade da evidência</li><li>Proposições falsificáveis e hipóteses rivais</li><li>Agenda empírica do segundo ano</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="convite">
+<section id="convite" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px;justify-content:center">
+<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Um convite</p>
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.05;color:#0F1E46">Que pergunta o seu trabalho já está fazendo?</h2>
+<p style="font-size:34px;line-height:1.45;color:#3B4560;width:1400px">A pesquisa empírica começa na observação atenta da prática. A Administração é um campo privilegiado para isso.</p>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>A observação atenta da prática</li><li>Pesquisa no currículo de Administração</li><li>Iniciação científica com problemas reais</li></ul></div>
+</section>
+
+</div>
+<div class="slide" data-id="obrigado">
+<section id="obrigado" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:row;gap:96px;align-items:center">
+<img src="assets/igor.jpg" alt="Retrato de Igor Caires Machado" style="width:420px;height:420px;object-fit:cover;border-radius:50%;border:10px solid #E8591E">
+<div style="flex:1;display:flex;flex-direction:column;gap:32px">
+<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1;color:#F6F4EF">Obrigado</h2>
+<div style="display:flex;flex-direction:column;gap:8px">
+<p style="font-size:36px;font-weight:700;color:#F6F4EF">Igor Caires Machado</p>
+<p style="font-size:28px;line-height:1.4;color:#C9D3E6">Analista Judiciário no CNJ · Pesquisador em pós-doutorado na ENAP</p>
+</div>
+<p style="font-size:28px;color:#F2884F">[e-mail ou LinkedIn]</p>
+</div>
+<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Agradecimento à plateia e à coordenação</li><li>Abertura para perguntas</li><li>Contato para continuar a conversa</li></ul></div>
+</section>
+
+</div>
+</div>
+<div id="notes"></div>
+<div id="bar"><div><button id="prev" aria-label="Slide anterior">◀</button> <button id="next" aria-label="Próximo slide">▶</button> <span id="count"></span></div><div><button id="nbtn">Notas (N)</button> <button id="fbtn">Tela cheia (F)</button></div></div>
+<script>
+const NOTES=["Abertura, 1 minuto. Boa noite. Agradeça à coordenação do curso de Administração pelo convite. Apresente-se em uma frase: gestor público no CNJ e pesquisador em pós-doutorado na ENAP. Anuncie o combinado da noite: falar de implementação de políticas públicas e mostrar como a pesquisa empírica pode transformar a carreira de quem trabalha com gestão.", "2 minutos. Apresente a trajetória de forma objetiva, da formação à atuação atual. A primeira linha é a formação e as primeiras experiências. A segunda, em azul, é a atuação atual. Uma frase basta para ligar tudo: o interesse pelo lugar onde o serviço público acontece levou da arquitetura à gestão e à pesquisa em políticas públicas. Siga para o problema.", "2 minutos. Peça à plateia uma experiência real: alguém já foi a um órgão público e saiu sem resolver por não achar o lugar certo ou a informação certa? Ouça uma ou duas respostas. A pergunta do slide guia a palestra inteira. A resposta curta: a política acontece em lugares concretos, e é aí que o administrador atua.", "2 minutos. Diga a tese em voz alta, devagar. Anuncie que o resto da palestra sustenta os três pontos, nesta ordem. Ponto 1: a literatura de implementação. Ponto 2: o framework e o Método ARENAS. Ponto 3: pesquisa empírica e carreira.", "3 minutos. Não transforme em aula de teoria. Três ideias bastam. Pressman e Wildavsky mostraram em 1973 que um programa federal aprovado em Washington se perdeu na execução em Oakland. Lipsky mostrou que o servidor da linha de frente produz a política real. Hill e Hupe sistematizam o campo hoje. A mensagem: decidir é só o começo. Execução é gestão, e gestão é o trabalho do administrador.", "2 minutos. Leia a lista devagar. Pergunte: quem aqui já trabalhou em algum desses lugares? Todo administrador que atua em serviço público ou privado lida com balcões, sistemas e filas. Esses lugares parecem detalhe operacional. A pesquisa mostra que eles participam da política pública.", "3 minutos. Quatro revisões bibliográficas e documentais apontaram o mesmo padrão. Várias tradições estudam o espaço: servicescape, psicologia ambiental, sociomaterialidade, custos administrativos. Elas raramente conversam com a literatura de implementação. Destaque a coluna de estágio: só o primeiro resultado já é reproduzível. Os demais são preliminares. Dizer isso em público mostra rigor.", "1 minuto. Apresente a pesquisa que sustenta a segunda parte da tese. É o relatório do primeiro ano do pós-doutorado na ENAP, de 2025 a 2026. Em uma frase: a pesquisa partiu da infraestrutura judicial e chegou a uma pergunta mais ampla sobre como os lugares participam da implementação de políticas públicas. Siga para o conceito de arena.", "3 minutos. Leia a definição em voz alta, pausando nos quatro verbos: interpretada, executada, negociada, experimentada. Dê o exemplo do próprio relatório: no mesmo fórum, a vara de família e o juizado especial são duas arenas, porque são duas políticas, com práticas e pontos de contato distintos. Outro exemplo: um benefício pedido por aplicativo e validado no posto de atendimento forma uma arena só, porque o percurso é único.", "2 minutos. Passe rápido pelos cinco grupos. A ideia que importa para o administrador: os componentes funcionam juntos. Uma norma de acessibilidade só existe de fato quando encontra rampa, sistema, servidor treinado e rotina de atendimento.", "4 minutos. Este é o núcleo explicativo do framework. Escolha dois mecanismos para aprofundar com histórias, de preferência M2 e M4, que todo administrador reconhece. Explique a lógica de direção: M1 desce da norma para o balcão, M5 sobe do balcão para a gestão. M2, M3 e M4 operam dentro da arena. Lembre que cada mecanismo tem uma proposição testável associada.", "3 minutos. Esta é a proposição mais distintiva do framework, a copresença seletiva. Ela conversa direto com decisões de administrador: fechar unidades, reduzir área, redesenhar atendimento. Deixe claro que é proposição a testar. O desenho de teste já está pensado: acompanhar redes que digitalizaram em fases e medir a complexidade dos atendimentos presenciais antes e depois, com dados administrativos que já existem.", "3 minutos. O método traduz o framework em ferramenta de gestão. As cinco primeiras lentes correspondem aos cinco mecanismos. A sexta costura as demais e lembra que se lê uma configuração inteira. Diga com clareza que é protótipo: ainda não foi testado em oficina. A aplicação à Central de Juizados de Salvador é um exemplo trabalhado com dados reais. Abra a possibilidade de testar o método com alunos.", "2 minutos. Ponte entre a pesquisa e a prática dos alunos. Convide cada um a pensar no próprio estágio ou emprego enquanto lê as perguntas. Essas perguntas valem para hospital, escola, banco, loja ou tribunal. É a contribuição prática do ARENAS para quem administra.", "4 minutos. Este é o terceiro ponto da tese e a mensagem principal para os alunos. Quem administra tem acesso privilegiado a problemas reais e a dados que já existem. Dê um exemplo concreto para cada passo, de preferência de um estágio comum em Administração. Reforce que metodologia de pesquisa deveria fazer parte da formação de qualquer curso.", "2 minutos. Este slide constrói credibilidade. O relatório classifica cada resultado pelo estágio em que está, e isso vale para a carreira: um aceite ainda não é publicação, uma proposição ainda não é evidência. O gestor que apresenta dados com o estágio declarado ganha confiança de quem decide. Anuncie o que vem no segundo ano.", "2 minutos. Feche com o convite. Se fizer sentido no momento, mencione de forma leve a ideia de criar um laboratório de pesquisa com estudantes na instituição, onde problemas reais de gestão virem projetos de iniciação científica. Não detalhe. Deixe a semente plantada para a conversa com a coordenação.", "Abra para perguntas. Tenha preparado um exemplo extra de cada mecanismo para responder com rapidez. Se houver pergunta sobre como começar a pesquisar, volte ao slide dos quatro passos."];
+const slides=[...document.querySelectorAll('.slide')];
+const stage=document.getElementById('stage');
+let i=Math.max(0,Math.min(slides.length-1,(parseInt(location.hash.slice(1))||1)-1));
+function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${s})`;}
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+document.getElementById('count').textContent=(i+1)+' / '+slides.length;document.getElementById('notes').textContent=NOTES[i]||'';history.replaceState(null,'','#'+(i+1));}
+addEventListener('keydown',e=>{
+ if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(i+1)}
+ else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}
+ else if(e.key==='Home')show(0); else if(e.key==='End')show(slides.length-1);
+ else if(e.key.toLowerCase()==='n')document.body.classList.toggle('show-notes');
+ else if(e.key.toLowerCase()==='f')toggleFs();});
+function toggleFs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);
+document.getElementById('nbtn').onclick=()=>document.body.classList.toggle('show-notes');document.getElementById('fbtn').onclick=toggleFs;
+let tx=null;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(i+(d<0?1:-1));tx=null});
+addEventListener('resize',fit);fit();show(i);
+</script>
+</body>
+</html>
