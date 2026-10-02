@@ -3,523 +3,75 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>O Papel do Administrador na Implementação de Políticas Públicas · Igor Caires Machado</title>
-<meta name="description" content="Palestra no IV Congresso Científico da Anhanguera Asa Norte, 07 de outubro de 2026.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap">
+<title>O papel do administrador na implementação de políticas públicas · Igor Caires Machado</title>
+<meta name="description" content="Palestra de Igor Caires Machado no IV Congresso Científico da Faculdade Anhanguera Asa Norte, 07 de outubro de 2026.">
+<meta property="og:title" content="O papel do administrador na implementação de políticas públicas">
+<meta property="og:description" content="IV Congresso Científico · Anhanguera Asa Norte · 07 de outubro de 2026">
+<meta property="og:image" content="slide-01.jpg">
 <style>
+:root{--navy:#0A2252;--orange:#FF5A1F;--paper:#FBFAF7;--muted:#C9D3E6}
 *{box-sizing:border-box;margin:0}
-html,body{height:100%;background:#0B1533;overflow:hidden}
-h1,h2,h3,p,li{overflow-wrap:break-word}
-h1,h2,h3{font-weight:600}
-ul{padding-left:1.1em}
-#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center center}
-.slide{position:absolute;inset:0;display:none}
-.slide.active{display:block}
-.slide>section{position:relative;width:1920px;height:1080px;overflow:hidden}
-#bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:8px 16px;font:14px Arial,sans-serif;color:#C9D3E6;opacity:0;transition:opacity .3s}
-body:hover #bar{opacity:1}
-#bar button{background:#1C2E5E;color:#F6F4EF;border:0;border-radius:6px;padding:6px 14px;font:14px Arial,sans-serif;cursor:pointer}
-#notes{display:none;position:fixed;left:0;right:0;bottom:44px;max-height:30vh;overflow:auto;background:#F6F4EF;color:#0F1E46;font:18px/1.5 Arial,sans-serif;padding:16px 24px;border-top:4px solid #E8591E}
+html,body{height:100%}
+body{background:var(--navy);color:#fff;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Arial,sans-serif;display:flex;flex-direction:column}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;border-top:4px solid var(--orange);flex-wrap:wrap}
+header h1{font-size:15px;font-weight:700;letter-spacing:.3px}
+header h1 span{color:var(--orange)}
+nav.dl{display:flex;gap:8px;flex-wrap:wrap}
+a.btn,button{background:#1C3566;color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;font-size:14px;cursor:pointer;text-decoration:none}
+a.btn:hover,button:hover{background:var(--orange)}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:8px 16px;min-height:0;position:relative}
+figure{position:absolute;inset:8px 16px;display:flex;align-items:center;justify-content:center}
+figure img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.35);background:var(--paper);cursor:pointer}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+footer{display:flex;align-items:center;justify-content:center;gap:8px 12px;padding:10px 16px 14px;flex-wrap:wrap}
+#count{min-width:70px;text-align:center;color:var(--muted);font-variant-numeric:tabular-nums}
+#bar{position:fixed;left:0;top:0;height:4px;background:var(--orange);transition:width .2s}
+#notes{display:none;max-height:28vh;overflow:auto;max-width:1100px;margin:0 auto 12px;padding:14px 18px;background:var(--paper);color:var(--navy);border-left:5px solid var(--orange);border-radius:6px;font-size:16px;width:calc(100% - 32px)}
 body.show-notes #notes{display:block}
-@media print{
-  @page{size:1920px 1080px;margin:0}
-  html,body{overflow:visible;background:none;height:auto}
-  #stage{position:static;transform:none!important;width:1920px;height:auto}
-  .slide{position:relative;display:block;page-break-after:always;break-after:page}
-  #bar,#notes{display:none!important}
-}
+body.fs header,body.fs footer{display:none}
+body.fs figure{inset:0}
+body.fs main{padding:0}
+@media (max-width:600px){header h1{font-size:13px} a.btn,button{padding:7px 10px;font-size:13px}}
+@media print{header,footer,#notes,#bar{display:none} body{background:#fff}}
 </style>
 </head>
 <body>
-<div id="stage">
-<div class="slide" data-id="cover">
-<section id="cover" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:row;gap:96px;align-items:center">
-<div style="flex:1;display:flex;flex-direction:column;gap:40px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">IV Congresso Científico · Anhanguera Asa Norte</p>
-<h1 style="font-family:'Oswald', Arial, sans-serif;font-size:88px;font-weight:600;line-height:1.08;text-transform:uppercase;color:#F6F4EF">O papel do administrador na implementação de políticas públicas</h1>
-<p style="font-size:32px;line-height:1.4;color:#C9D3E6">Da decisão pública à capacidade de entrega</p>
-<div style="display:flex;flex-direction:column;gap:8px">
-<p style="font-size:32px;font-weight:700;color:#F6F4EF">Igor Caires Machado</p>
-<p style="font-size:26px;color:#C9D3E6">Curso de Administração · 07 de outubro de 2026</p>
-</div>
-</div>
-<img src="igor.jpg" alt="Retrato de Igor Caires Machado" style="width:480px;height:480px;object-fit:cover;border-radius:50%;border:10px solid #E8591E">
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Agradecimento à coordenação do curso</li><li>Tema: implementação de políticas públicas</li><li>Pesquisa empírica como ferramenta de carreira</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="perfil">
-<section id="perfil" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Trajetória</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Da arquitetura à gestão e à pesquisa em políticas públicas</h2>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
-<div style="display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#B8410E">UFBA · 2007</p>
-<p style="font-size:28px;line-height:1.4;color:#0F1E46">Graduação em Arquitetura e Urbanismo</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#B8410E">TJBA</p>
-<p style="font-size:28px;line-height:1.4;color:#0F1E46">Liderança administrativa no Tribunal de Justiça da Bahia</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#B8410E">UCES · 2024</p>
-<p style="font-size:28px;line-height:1.4;color:#0F1E46">Doutorado em Ciências Empresariais e Sociais, Buenos Aires</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#F2884F">CNJ</p>
-<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Analista Judiciário no Conselho Nacional de Justiça</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#F2884F">ENAJU</p>
-<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px;border-top:8px solid #E8591E">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:600;color:#F2884F">ENAP · 2025–2026</p>
-<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Pós-doutorado em Governança e Avaliação de Políticas Públicas</p>
-</div>
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Formação em arquitetura e urbanismo</li><li>Gestão pública no TJBA, no CNJ e na ENAJU</li><li>Doutorado na UCES e pós-doutorado na ENAP</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="cena">
-<section id="cena" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px;justify-content:center">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Ponto de partida</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:96px;font-weight:600;line-height:1.1;color:#0F1E46">Uma política bem desenhada pode travar no balcão.</h2>
-<p style="font-size:32px;line-height:1.45;color:#3B4560;width:1300px">A norma está publicada. O orçamento existe. O cidadão chega e não encontra a fila certa, a sala adequada ou a informação de que precisa.</p>
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:600;color:#B8410E">Onde a política pública acontece?</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Política bem desenhada que trava no balcão</li><li>Implementação como problema (Pressman; Wildavsky, 1973)</li><li>Pergunta-guia: onde a política acontece?</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="tese">
-<section id="tese" style="background:#E8591E;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px;justify-content:center">
-<div style="display:flex;flex-direction:column;gap:24px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#0F1E46">A tese desta palestra</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:80px;font-weight:700;line-height:1.1;color:#0F1E46">O administrador faz a política pública acontecer quando organiza o lugar em que ela encontra o cidadão.</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">1</p>
-<p style="font-size:28px;line-height:1.4;color:#F6F4EF">A implementação acontece em lugares concretos: balcões, sistemas, filas e formulários.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">2</p>
-<p style="font-size:28px;line-height:1.4;color:#F6F4EF">Esses lugares podem ser lidos e redesenhados com método.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#0F1E46;padding:36px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">3</p>
-<p style="font-size:28px;line-height:1.4;color:#F6F4EF">A pesquisa empírica dá ao administrador essa capacidade.</p>
-</div>
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#0F1E46;padding:16px 24px;border-left:6px solid #F6F4EF;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#F6F4EF"><li>A política acontece em lugares concretos</li><li>Esses lugares podem ser lidos e redesenhados</li><li>A pesquisa como capacidade do administrador</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="passagem">
-<section id="passagem" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Papel do administrador</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Entre a decisão e o resultado há uma organização</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:64px;align-items:center">
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;align-items:start">
-<p style="font-size:32px;font-weight:700;color:#0F1E46;background:#E9EEF6;padding:20px 32px;border-radius:12px">1 · Decisão pública</p>
-<svg aria-hidden="true" width="36" height="48" viewBox="0 0 36 48" style="flex:none"><polygon points="10.799999999999999,0 25.2,0 25.2,28.799999999999997 36,28.799999999999997 18.0,48 0,28.799999999999997 10.799999999999999,28.799999999999997" fill="#E8591E"/></svg>
-<p style="font-size:32px;font-weight:700;color:#F6F4EF;background:#0F1E46;padding:20px 32px;border-radius:12px">2 · Capacidade organizacional</p>
-<svg aria-hidden="true" width="36" height="48" viewBox="0 0 36 48" style="flex:none"><polygon points="10.799999999999999,0 25.2,0 25.2,28.799999999999997 36,28.799999999999997 18.0,48 0,28.799999999999997 10.799999999999999,28.799999999999997" fill="#E8591E"/></svg>
-<p style="font-size:32px;font-weight:700;color:#0F1E46;background:#E9EEF6;padding:20px 32px;border-radius:12px">3 · Entrega ao cidadão</p>
-<p style="font-size:28px;line-height:1.4;color:#3B4560">O administrador coordena recursos, pessoas, rotinas, evidências e adaptações.</p>
-</div>
-<img src="il-organizacao.jpg" alt="Ilustração de um órgão público com equipes, atendimento e painéis de dados" style="width:760px;height:428px;object-fit:cover;border-radius:12px">
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Organização e burocracia (Weber, 1999 [1922])</li><li>Decisão nas organizações (Simon, 1947)</li><li>A política feita na linha de frente (Lipsky, 1980)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="implementacao">
-<section id="implementacao" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Implementação</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Entre a decisão e o resultado existe a execução</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:32px">
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:40px;border-top:8px solid #E8591E;border-radius:8px;box-shadow:0 4px 16px rgba(15,30,70,0.08)">
-<h3 style="font-size:32px;font-weight:700;color:#0F1E46">Pressman e Wildavsky, 1973</h3>
-<p style="font-size:28px;line-height:1.4;color:#3B4560">A distância entre o que se decide em Washington e o que acontece em Oakland.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:40px;border-top:8px solid #E8591E;border-radius:8px;box-shadow:0 4px 16px rgba(15,30,70,0.08)">
-<h3 style="font-size:32px;font-weight:700;color:#0F1E46">Lipsky, 1980</h3>
-<p style="font-size:28px;line-height:1.4;color:#3B4560">A política real é produzida na linha de frente, sob pressão de demanda e escassez de recursos.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:40px;border-top:8px solid #E8591E;border-radius:8px;box-shadow:0 4px 16px rgba(15,30,70,0.08)">
-<h3 style="font-size:32px;font-weight:700;color:#0F1E46">Hill e Hupe, 2022</h3>
-<p style="font-size:28px;line-height:1.4;color:#3B4560">Organização, discricionariedade e condições institucionais moldam a ação pública.</p>
-</div>
-</div>
-<p style="font-size:32px;font-weight:700;color:#0F1E46">É nesse intervalo que o administrador trabalha.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Decisão e execução (Pressman; Wildavsky, 1973)</li><li>Linha de frente e discricionariedade (Lipsky, 1980)</li><li>Condições institucionais (Hill; Hupe, 2022)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="traduzir">
-<section id="traduzir" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Implementação</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Implementar é traduzir</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:64px;align-items:center">
-<div style="flex:1;display:flex;flex-direction:column;gap:32px">
-<p style="font-size:32px;line-height:1.45;color:#0F1E46">Prescrições institucionais precisam assumir formas concretas em práticas situadas.</p>
-<div style="display:flex;flex-direction:row;flex-wrap:wrap;gap:12px">
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">normas</p>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">processos</p>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">sistemas</p>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">espaços</p>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">rotinas</p>
-<p style="font-size:26px;font-weight:600;color:#0F1E46;background:#F2884F;padding:10px 24px;border-radius:999px">decisões de linha de frente</p>
-</div>
-<p style="font-size:28px;line-height:1.45;color:#3B4560">Traduzir envolve interpretação, adaptação e coordenação. Por isso a mesma política gera experiências diferentes em unidades diferentes.</p>
-</div>
-<img src="il-traducao.jpg" alt="Ilustração de um documento normativo que se transforma em pessoas, sistemas e serviços" style="width:720px;height:405px;object-fit:cover;border-radius:12px">
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Instrumentos de política (Lascoumes; Le Galès, 2007)</li><li>Discricionariedade na linha de frente (Lipsky, 1980)</li><li>Mesma política, experiências diferentes</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="onde">
-<section id="onde" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:40px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Onde a política acontece</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">A política ganha forma em lugares concretos</h2>
-</div>
-<div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:24px">
-<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Balcões</p></div>
-<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Salas de atendimento</p></div>
-<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Formulários</p></div>
-<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Sistemas</p></div>
-<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Filas</p></div>
-<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Interfaces</p></div>
-<div style="background:#FCFBF8;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Corredores</p></div>
-<div style="background:#0F1E46;padding:40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Plataformas</p></div>
-</div>
-<p style="font-size:32px;line-height:1.4;color:#3B4560">Nesses arranjos, a norma vira prática, o trabalho se organiza e o cidadão forma sua experiência com o Estado.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Ambiente e serviço: servicescape (Bitner, 1992)</li><li>Custos administrativos (Herd; Moynihan, 2019)</li><li>Instrumentos de política (Lascoumes; Le Galès, 2007)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="lacuna">
-<section id="lacuna" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">O que a pesquisa mostra</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">A literatura trata o espaço de forma fragmentada</h2>
-</div>
-<table style="font-size:26px;color:#0F1E46;border-radius:8px">
-<tr style="background:#0F1E46"><th style="width:26%;color:#F6F4EF;padding:16px 20px">Frente de estudo</th><th style="width:52%;color:#F6F4EF">O que indicou</th><th style="width:22%;color:#F6F4EF">Estágio</th></tr>
-<tr style="background:#FCFBF8"><td>Política judiciária</td><td>Termos de infraestrutura física ausentes dos núcleos temáticos da literatura</td><td>Resultado reproduzível</td></tr>
-<tr style="background:#EFEBE3"><td>Implementação</td><td>Proporção muito baixa de trabalhos que tratam o espaço como variável ativa</td><td>Preliminar</td></tr>
-<tr style="background:#FCFBF8"><td>Evidências empíricas</td><td>Evidência densa só no trabalho dos servidores, com lacunas nas demais dimensões</td><td>Preliminar</td></tr>
-<tr style="background:#EFEBE3"><td>Sociomaterialidade</td><td>Ligação escassa com o espaço dos serviços públicos</td><td>Preliminar</td></tr>
-</table>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Revisão de escopo (Tricco et al., 2018)</li><li>Dispersão entre periódicos (Bradford, 1934)</li><li>Formação de um campo científico (Whitley, 1984)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="posdoc">
-<section id="posdoc" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:row;gap:96px;align-items:center">
-<img src="capa-posdoc.jpg" alt="Capa do relatório do Ano 1 do pós-doutorado: Das Arquiteturas Judiciárias às Arenas Sociomateriais de Implementação" style="width:532px;height:752px;object-fit:cover;border-radius:8px;box-shadow:0 12px 40px rgba(15,30,70,0.25)">
-<div style="flex:1;display:flex;flex-direction:column;gap:32px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Pesquisa de pós-doutorado · ENAP</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Das arquiteturas judiciárias às arenas sociomateriais de implementação</h2>
-<p style="font-size:32px;line-height:1.45;color:#3B4560">Desenvolvimento do framework ARENAS e sua ampliação pela governança regulatória.</p>
-<p style="font-size:26px;line-height:1.45;color:#3B4560">Linha de Governança e práticas de avaliação de políticas públicas. Supervisão da Prof.ª Dr.ª Regina Luna Santos de Souza.</p>
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Origem: arquitetura judiciária e escala ARQJUD</li><li>O framework ARENAS e sua operacionalização</li><li>Ampliação pela governança regulatória</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="arena">
-<section id="arena" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px;justify-content:center">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Conceito central · Pesquisa de pós-doutorado, ENAP</p>
-<div style="display:flex;flex-direction:column;gap:24px;border-left:12px solid #E8591E;padding:8px 0 8px 56px">
-<p style="font-size:44px;font-weight:500;line-height:1.35;color:#0F1E46">Uma <b>arena sociomaterial de implementação</b> é uma configuração situada de atores, prescrições institucionais, espaços, artefatos, tecnologias e infraestruturas por meio da qual uma política pública é interpretada, executada, negociada e experimentada.</p>
-</div>
-<p style="font-size:32px;line-height:1.45;color:#3B4560">Um prédio pode conter várias arenas. Uma arena pode atravessar prédios, plataformas e documentos.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Sociomaterialidade nas organizações (Orlikowski, 2007)</li><li>Imbricação entre humano e material (Leonardi, 2011)</li><li>Como delimitar uma arena: política e ponto de contato</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="componentes">
-<section id="componentes" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Framework ARENAS</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Cinco componentes, e a relação entre eles forma a arena</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #0F1E46">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Atores</h3>
-<p style="font-size:24px;line-height:1.4;color:#3B4560">Profissionais, cidadãos, gestores, intermediários</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #0F1E46">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Prescrições</h3>
-<p style="font-size:24px;line-height:1.4;color:#3B4560">Normas, regras, procedimentos, critérios de elegibilidade</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #E8591E">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Materialidades</h3>
-<p style="font-size:24px;line-height:1.4;color:#3B4560">Edifícios, salas, balcões, mobiliário, documentos</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #E8591E">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Tecnologias</h3>
-<p style="font-size:24px;line-height:1.4;color:#3B4560">Plataformas, sistemas, formulários, sinalização</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#FCFBF8;padding:32px;border-radius:12px;border-top:8px solid #0F1E46">
-<h3 style="font-size:32px;font-weight:700;line-height:1.2;color:#0F1E46">Práticas</h3>
-<p style="font-size:24px;line-height:1.4;color:#3B4560">Esperar, circular, atender, decidir, adaptar</p>
-</div>
-</div>
-<p style="font-size:32px;line-height:1.4;color:#3B4560">Um componente isolado não forma uma arena. O objeto de análise é o entrelaçamento.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Cinco grupos relacionais do framework</li><li>Mediação por artefatos (Engeström, 2001)</li><li>Configurações que se sedimentam (Leonardi, 2011)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="mecanismos">
-<section id="mecanismos" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:40px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Como o espaço participa</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Cinco mecanismos, com exemplos do Judiciário</h2>
-</div>
-<table style="font-size:24px;color:#0F1E46">
-<tr style="background:#0F1E46"><th style="width:24%;color:#F6F4EF;padding:12px 20px">Mecanismo</th><th style="width:34%;color:#F6F4EF">Pergunta</th><th style="width:42%;color:#F6F4EF">Exemplo</th></tr>
-<tr style="background:#FCFBF8"><td><b>M1</b> Instrumentação</td><td>Como a norma vira arranjo concreto?</td><td>Resolução de acessibilidade que vira, ou não, rampa e sinalização tátil</td></tr>
-<tr style="background:#EFEBE3"><td><b>M2</b> Mediação do trabalho</td><td>Como o arranjo organiza o trabalho?</td><td>Processos empilhados no corredor porque o arquivo fica em outro andar</td></tr>
-<tr style="background:#FCFBF8"><td><b>M3</b> Mediação da experiência</td><td>Como o lugar afeta a percepção de tratamento justo?</td><td>Bancada elevada na sala de audiência reforça a distância institucional</td></tr>
-<tr style="background:#EFEBE3"><td><b>M4</b> Legibilidade</td><td>A instituição é compreensível para quem chega?</td><td>Tribunal sem sinalização obriga o cidadão a perguntar várias vezes</td></tr>
-<tr style="background:#FCFBF8"><td><b>M5</b> Aprendizagem</td><td>As fricções chegam a quem decide?</td><td>Erros recorrentes do sistema eletrônico nunca notificados à gestão</td></tr>
-</table>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Norma que vira arranjo (Lascoumes; Le Galès, 2007)</li><li>Justiça procedimental (Tyler, 2003)</li><li>Aprendizagem organizacional (Argyris; Schön, 1978)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="copresenca">
-<section id="copresenca" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px;justify-content:center">
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">Um achado para o gestor</p>
-<p style="font-size:24px;font-weight:600;color:#0F1E46;background:#F2884F;padding:6px 20px;border-radius:999px">Proposição a testar</p>
-</div>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:88px;font-weight:600;line-height:1.1;color:#F6F4EF">A digitalização redistribui a materialidade da política pública</h2>
-<p style="font-size:32px;line-height:1.45;color:#C9D3E6;width:1400px">Quando as transações rotineiras migram para o digital, o prédio recebe menos pessoas. Os atendimentos que permanecem presenciais tendem a exigir mais coordenação, proteção e infraestrutura.</p>
-<p style="font-size:32px;font-weight:700;line-height:1.45;color:#F6F4EF;width:1400px">Consequência: a ocupação média perde força como indicador de valor público.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Digitalização e encontros complexos</li><li>Custos para o cidadão (Christensen et al., 2020)</li><li>Ocupação média como indicador de valor público</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="metodo">
-<section id="metodo" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Do conceito à prática</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Método ARENAS: seis lentes de diagnóstico</h2>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:20px">
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">A</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Arranjo espacial</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">R</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Rotinas de trabalho</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">E</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Experiência</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">N</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Navegabilidade</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#FCFBF8;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#B8410E">A</p><p style="font-size:32px;font-weight:600;color:#0F1E46">Aprendizagem</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#0F1E46;padding:20px 32px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">S</p><p style="font-size:32px;font-weight:600;color:#F6F4EF">Sociomaterialidade</p></div>
-</div>
-<div style="display:flex;flex-direction:row;gap:16px;align-items:center;flex-wrap:wrap">
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Observar</p>
-<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Diagnosticar</p>
-<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Redesenhar</p>
-<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Testar e avaliar</p>
-<svg aria-hidden="true" width="48" height="24" viewBox="0 0 48 24" style="flex:none"><polygon points="0,7.199999999999999 28.799999999999997,7.199999999999999 28.799999999999997,0 48,12.0 28.799999999999997,24 28.799999999999997,16.799999999999997 0,16.799999999999997" fill="#E8591E"/></svg>
-<p style="font-size:26px;font-weight:600;color:#F6F4EF;background:#0F1E46;padding:10px 24px;border-radius:999px">Aprender</p>
-</div>
-<p style="font-size:26px;color:#3B4560">Protótipo com baralho de 24 cartas, checklist bilíngue e ciclo de aplicação em cinco passos.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Seis lentes de diagnóstico</li><li>Ciclo: observar, diagnosticar, redesenhar</li><li>Gestão baseada em confiança (Torfing, 2023)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="exemplo">
-<section id="exemplo" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:44px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Exercício com a turma</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Exemplo: novo protocolo de atendimento</h2>
-</div>
-<p style="font-size:32px;line-height:1.45;color:#0F1E46;background:#E9EEF6;padding:28px 36px;border-radius:12px;border-left:8px solid #E8591E">O fluxo foi redesenhado, a meta foi definida e a equipe foi comunicada. Após três meses, o tempo de atendimento pouco mudou. <b>Onde investigar?</b></p>
-<div style="display:flex;flex-direction:row;gap:20px;align-items:stretch">
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:28px;border-radius:12px;border-top:8px solid #0F1E46"><h3 style="font-size:30px;font-weight:700;color:#0F1E46">Arranjo</h3><p style="font-size:24px;line-height:1.4;color:#3B4560">A distribuição de pessoas e recursos mudou?</p></div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:28px;border-radius:12px;border-top:8px solid #0F1E46"><h3 style="font-size:30px;font-weight:700;color:#0F1E46">Rotinas</h3><p style="font-size:24px;line-height:1.4;color:#3B4560">O trabalho real seguiu o fluxo prescrito?</p></div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:28px;border-radius:12px;border-top:8px solid #0F1E46"><h3 style="font-size:30px;font-weight:700;color:#0F1E46">Experiência</h3><p style="font-size:24px;line-height:1.4;color:#3B4560">Usuários e equipe compreenderam a mudança?</p></div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:28px;border-radius:12px;border-top:8px solid #0F1E46"><h3 style="font-size:30px;font-weight:700;color:#0F1E46">Navegabilidade</h3><p style="font-size:24px;line-height:1.4;color:#3B4560">O percurso ficou mais claro?</p></div>
-<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#FCFBF8;padding:28px;border-radius:12px;border-top:8px solid #E8591E"><h3 style="font-size:30px;font-weight:700;color:#0F1E46">Aprendizagem</h3><p style="font-size:24px;line-height:1.4;color:#3B4560">As falhas voltaram para quem decide?</p></div>
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>A regra mudou e o resultado ficou parecido</li><li>Investigar pelas lentes do Método ARENAS</li><li>Gestão baseada em evidências (Briner; Denyer; Rousseau, 2009)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="competencia">
-<section id="competencia" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Pesquisa e carreira</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Pesquisa empírica é uma competência do administrador</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:56px;align-items:center">
-<div style="flex:1;display:grid;grid-template-columns:repeat(2, 1fr);gap:20px">
-<div style="display:flex;flex-direction:column;gap:8px;background:#FCFBF8;padding:28px;border-radius:12px;border-left:8px solid #E8591E"><h3 style="font-size:32px;font-weight:700;color:#0F1E46">Problema</h3><p style="font-size:26px;line-height:1.4;color:#3B4560">Enxergar além do sintoma</p></div>
-<div style="display:flex;flex-direction:column;gap:8px;background:#FCFBF8;padding:28px;border-radius:12px;border-left:8px solid #E8591E"><h3 style="font-size:32px;font-weight:700;color:#0F1E46">Método</h3><p style="font-size:26px;line-height:1.4;color:#3B4560">Organizar a investigação</p></div>
-<div style="display:flex;flex-direction:column;gap:8px;background:#FCFBF8;padding:28px;border-radius:12px;border-left:8px solid #E8591E"><h3 style="font-size:32px;font-weight:700;color:#0F1E46">Evidência</h3><p style="font-size:26px;line-height:1.4;color:#3B4560">Sustentar decisões</p></div>
-<div style="display:flex;flex-direction:column;gap:8px;background:#0F1E46;padding:28px;border-radius:12px;border-left:8px solid #E8591E"><h3 style="font-size:32px;font-weight:700;color:#F6F4EF">Comunicação</h3><p style="font-size:26px;line-height:1.4;color:#C9D3E6">Produzir autoridade técnica</p></div>
-</div>
-<img src="il-ciclo.jpg" alt="Ilustração de um ciclo de observação, análise, discussão e redesenho feito por equipes" style="width:640px;height:360px;object-fit:cover;border-radius:12px">
-</div>
-<p style="font-size:30px;line-height:1.45;color:#3B4560">A experiência profissional ganha força quando pode ser descrita, analisada e comunicada com método.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Separar opinião, hipótese e evidência</li><li>Gestão baseada em evidências (Briner; Denyer; Rousseau, 2009)</li><li>Comportamento administrativo (Simon, 1947)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="carreira">
-<section id="carreira" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">Pesquisa e carreira</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F6F4EF">Seu local de trabalho é um campo de pesquisa</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:stretch">
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">1</p>
-<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Observe</h3>
-<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Que problema se repete no seu trabalho?</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">2</p>
-<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Registre</h3>
-<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Anote casos, fluxos, reclamações e improvisos.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">3</p>
-<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Meça</h3>
-<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Use os dados administrativos que já existem.</p>
-</div>
-<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#1C2E5E;padding:40px;border-radius:12px">
-<p style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1;color:#F2884F">4</p>
-<h3 style="font-size:36px;font-weight:700;color:#F6F4EF">Escreva</h3>
-<p style="font-size:26px;line-height:1.4;color:#C9D3E6">Transforme o achado em artigo, relatório ou proposta.</p>
-</div>
-</div>
-<p style="font-size:32px;font-weight:600;line-height:1.45;color:#F6F4EF">Quem pesquisa o próprio trabalho decide melhor e se diferencia na carreira.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>O local de trabalho como campo de pesquisa</li><li>Dados administrativos como fonte de evidência</li><li>Do achado ao artigo, ao relatório ou à proposta</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="justica">
-<section id="justica" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Um campo para a Administração</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">O sistema de Justiça também é organização e serviço público</h2>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:24px">
-<div style="background:#0F1E46;padding:32px 40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Governança</p></div>
-<div style="background:#FCFBF8;padding:32px 40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Produtividade</p></div>
-<div style="background:#0F1E46;padding:32px 40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Acessibilidade</p></div>
-<div style="background:#FCFBF8;padding:32px 40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">IA e dados</p></div>
-<div style="background:#0F1E46;padding:32px 40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#F6F4EF">Educação judicial</p></div>
-<div style="background:#FCFBF8;padding:32px 40px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:44px;font-weight:500;color:#0F1E46">Experiência do usuário</p></div>
-</div>
-<p style="font-size:30px;line-height:1.45;color:#3B4560">Muitos temas do Judiciário são problemas de gestão, pessoas, dados, aprendizagem e entrega de serviço.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>O Judiciário como objeto de reforma (Sadek, 2004)</li><li>Desempenho e administração da justiça (Gomes; Guimarães, 2013)</li><li>Temas de pesquisa para a Administração</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="rigor">
-<section id="rigor" style="background:#F6F4EF;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:56px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Rigor</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#0F1E46">Cada resultado no seu estágio de maturidade</h2>
-</div>
-<div style="display:flex;flex-direction:row;gap:16px;align-items:end">
-<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#E9EEF6;padding:28px;border-radius:12px;height:120px"><p style="font-size:28px;font-weight:700;color:#0F1E46">Proposição</p></div>
-<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#D3DCEB;padding:28px;border-radius:12px;height:165px"><p style="font-size:28px;font-weight:700;color:#0F1E46">Evidência preliminar</p></div>
-<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#AFC0DA;padding:28px;border-radius:12px;height:210px"><p style="font-size:28px;font-weight:700;color:#0F1E46">Manuscrito</p></div>
-<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#2B4580;padding:28px;border-radius:12px;height:255px"><p style="font-size:28px;font-weight:700;color:#F6F4EF">Aceite</p></div>
-<div style="flex:1;display:flex;flex-direction:column;justify-content:end;background:#0F1E46;padding:28px;border-radius:12px;height:300px"><p style="font-size:28px;font-weight:700;color:#F6F4EF">Publicação</p></div>
-</div>
-<p style="font-size:32px;line-height:1.45;color:#3B4560">Hoje o ARENAS é uma formulação teórica fundamentada. O segundo ano abre o teste empírico das proposições e a validação dos instrumentos.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>Estágios de maturidade da evidência</li><li>Proposições falsificáveis e hipóteses rivais</li><li>Agenda empírica do segundo ano</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="sintese">
-<section id="sintese" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px">
-<div style="display:flex;flex-direction:column;gap:16px">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#F2884F">Síntese</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:72px;font-weight:600;line-height:1.1;color:#F6F4EF">O administrador transforma decisões públicas em capacidade de entrega</h2>
-</div>
-<div style="display:grid;grid-template-columns:repeat(2, 1fr);gap:24px">
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#1C2E5E;padding:28px 36px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">1</p><p style="font-size:32px;font-weight:600;line-height:1.3;color:#F6F4EF">Como a política foi traduzida?</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#1C2E5E;padding:28px 36px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">2</p><p style="font-size:32px;font-weight:600;line-height:1.3;color:#F6F4EF">Que arena a implementa?</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#1C2E5E;padding:28px 36px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">3</p><p style="font-size:32px;font-weight:600;line-height:1.3;color:#F6F4EF">Que evidências mostram o funcionamento real?</p></div>
-<div style="display:flex;flex-direction:row;gap:24px;align-items:center;background:#1C2E5E;padding:28px 36px;border-radius:12px"><p style="font-family:'Oswald', Arial, sans-serif;font-size:56px;font-weight:700;line-height:1;color:#F2884F">4</p><p style="font-size:32px;font-weight:600;line-height:1.3;color:#F6F4EF">Como a organização aprende com a experiência?</p></div>
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Retomada da tese</li><li>Da decisão à execução (Pressman; Wildavsky, 1973)</li><li>A política feita na linha de frente (Lipsky, 1980)</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="convite">
-<section id="convite" style="background:#E9EEF6;color:#0F1E46;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:column;gap:48px;justify-content:center">
-<p style="font-size:26px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#B8410E">Um convite</p>
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:104px;font-weight:700;line-height:1.05;color:#0F1E46">Que pergunta o seu trabalho já está fazendo?</h2>
-<p style="font-size:34px;line-height:1.45;color:#3B4560;width:1400px">A pesquisa empírica começa na observação atenta da prática. A Administração é um campo privilegiado para isso.</p>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#FCFBF8;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px;box-shadow:0 2px 10px rgba(15,30,70,0.10)"><ul style="font-size:24px;line-height:1.3;color:#3B4560"><li>A observação atenta da prática</li><li>Pesquisa no currículo de Administração</li><li>Iniciação científica com problemas reais</li></ul></div>
-</section>
-
-</div>
-<div class="slide" data-id="obrigado">
-<section id="obrigado" style="background:#0F1E46;color:#F6F4EF;font-family:'Public Sans', Arial, sans-serif;padding:128px 128px 200px;display:flex;flex-direction:row;gap:80px;align-items:center">
-<img src="igor.jpg" alt="Retrato de Igor Caires Machado" style="width:400px;height:400px;object-fit:cover;border-radius:50%;border:10px solid #E8591E">
-<div style="flex:1;display:flex;flex-direction:column;gap:28px">
-<h2 style="font-family:'Oswald', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1;color:#F6F4EF">Obrigado</h2>
-<div style="display:flex;flex-direction:column;gap:8px">
-<p style="font-size:36px;font-weight:700;color:#F6F4EF">Igor Caires Machado</p>
-<p style="font-size:28px;line-height:1.4;color:#C9D3E6">Pesquisa · gestão pública · implementação de políticas</p>
-</div>
-<p style="font-size:28px;font-weight:600;color:#F2884F">cairesmachado-svg.github.io/Site_hub</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:16px;align-items:center">
-<div style="background:#F6F4EF;padding:20px;border-radius:16px"><img src="qr-sitehub.png" alt="QR code para o Site Hub de Igor Caires Machado" style="width:280px;height:280px;object-fit:contain"></div>
-<p style="font-size:24px;color:#C9D3E6">Materiais e referências</p>
-</div>
-<div style="position:absolute;right:96px;bottom:40px;width:760px;background:#1C2E5E;padding:16px 24px;border-left:6px solid #E8591E;border-radius:8px"><ul style="font-size:24px;line-height:1.3;color:#C9D3E6"><li>Agradecimento à plateia e à coordenação</li><li>Abertura para perguntas</li><li>Materiais e referências no Site Hub</li></ul></div>
-</section>
-
-</div>
-</div>
-<div id="notes"></div>
-<div id="bar"><div><button id="prev" aria-label="Slide anterior">◀</button> <button id="next" aria-label="Próximo slide">▶</button> <span id="count"></span></div><div><button id="nbtn">Notas (N)</button> <button id="fbtn">Tela cheia (F)</button></div></div>
+<div id="bar"></div>
+<header>
+<h1>IV Congresso Científico <span>·</span> Igor Caires Machado</h1>
+<nav class="dl"><a class="btn" href="Palestra_Igor_Caires_Machado_IV_Congresso.pdf" download>Baixar PDF</a><a class="btn" href="Palestra_Igor_Caires_Machado_IV_Congresso.pptx" download>Baixar PowerPoint</a></nav>
+</header>
+<main><figure><img id="slide" src="slide-01.jpg" alt=""><figcaption id="cap" class="sr" aria-live="polite"></figcaption></figure></main>
+<div id="notes" aria-live="polite"></div>
+<footer>
+<button id="prev" aria-label="Slide anterior">◀ Anterior</button>
+<span id="count">1 / 23</span>
+<button id="next" aria-label="Próximo slide">Próximo ▶</button>
+<button id="nbtn" aria-pressed="false">Notas (N)</button>
+<button id="fbtn">Tela cheia (F)</button>
+</footer>
 <script>
-const NOTES=["1 min. Boa noite. Agradeço à coordenação do curso de Administração pelo convite e a todos vocês pela presença. Hoje quero conversar sobre uma pergunta prática: como uma decisão pública chega até a vida das pessoas. O título fala do papel do administrador na implementação de políticas públicas. O subtítulo resume o percurso desta noite: da decisão pública à capacidade de entrega. No final, quero mostrar como a pesquisa empírica pode fortalecer a carreira de quem trabalha com gestão.", "2 min. Antes de entrar no tema, uma breve apresentação. Minha formação inicial é em Arquitetura e Urbanismo, pela UFBA. A arquitetura me deu um olhar para o espaço que levo até hoje. Depois fui para a gestão pública. No Tribunal de Justiça da Bahia, atuei na liderança administrativa. Fiz o doutorado em Ciências Empresariais e Sociais na UCES, em Buenos Aires, com foco em desempenho organizacional. Hoje sou Analista Judiciário no Conselho Nacional de Justiça e coordeno a área de Desenvolvimento Educacional, Pesquisa e Inovação da ENAJU. Também faço pós-doutorado na ENAP, em Governança e Avaliação de Políticas Públicas. Conto isso por um motivo simples. Tudo o que vou apresentar nasceu de problemas reais de gestão. A pesquisa veio depois, para entender melhor esses problemas.", "2 min. Começo com uma cena que todos conhecem. Uma política pública é bem desenhada. A norma está publicada. O orçamento existe. A comunicação foi feita. Mesmo assim, o cidadão chega ao atendimento e sai sem resolver. Não encontra a fila certa. Não acha a sala. Não entende o formulário. Quem aqui já passou por isso em um órgão público, num banco ou num hospital? [Pausa. Ouvir uma ou duas respostas.] Essa experiência levanta a pergunta que guia a palestra: onde a política pública acontece de fato? Pressman e Wildavsky mostraram, em 1973, que a distância entre decidir e executar é enorme. Essa distância é o território da Administração.", "2 min. Vou deixar a tese clara desde já. O administrador faz a política pública acontecer quando organiza o lugar em que ela encontra o cidadão. A tese tem três partes, e a palestra segue essa ordem. Primeiro: a implementação acontece em lugares concretos. Balcões, sistemas, filas, formulários. Segundo: esses lugares podem ser lidos e redesenhados com método. É aqui que apresento a minha pesquisa de pós-doutorado. Terceiro: a pesquisa empírica dá ao administrador essa capacidade. E isso faz diferença na carreira.", "2 min. Entre uma decisão pública e o resultado na vida das pessoas existe uma organização inteira. A decisão define a intenção. A entrega é o que o cidadão percebe. No meio está a capacidade organizacional: equipes, rotinas, sistemas, espaços, orçamento e informação. Weber descreveu a burocracia como a forma moderna de organizar essa capacidade. Simon mostrou que as organizações decidem o tempo todo, em cada nível, com informação limitada. Lipsky mostrou que boa parte da política é decidida na linha de frente, por quem atende. O administrador trabalha nesse degrau do meio. Ele coordena recursos, pessoas, rotinas, evidências e adaptações. É ali que a intenção vira funcionamento.", "2 min. O campo de estudos da implementação nasceu dessa constatação. Pressman e Wildavsky estudaram um programa federal de emprego aprovado em Washington. Na execução, em Oakland, ele se perdeu entre aprovações, atores e prazos. Lipsky, em 1980, olhou para o servidor da linha de frente: o professor, o policial, o assistente social. Ele mostrou que essas pessoas produzem a política real, sob pressão de demanda e com recursos escassos. Hill e Hupe organizaram o campo e mostraram como organização, discricionariedade e condições institucionais moldam a ação pública. A conclusão para nós é direta. Decidir é só o começo. Execução é gestão. E gestão é o trabalho do administrador.", "1 min 30 s. Implementar é traduzir. Uma norma precisa virar processo, sistema, espaço, rotina e decisão de linha de frente. Toda tradução envolve interpretação, adaptação e alguma perda. Lascoumes e Le Galès mostram que os instrumentos de política organizam relações e produzem efeitos próprios. Por isso a mesma política gera experiências diferentes em unidades diferentes. Pensem em duas agências do mesmo banco, com as mesmas regras. Uma funciona bem. A outra vive com fila e reclamação. A regra é a mesma. A tradução foi diferente.", "1 min 30 s. Se a política é traduzida, ela ganha forma em algum lugar. Balcões, salas de atendimento, formulários, sistemas, filas, interfaces, corredores, plataformas. Esses lugares costumam ser tratados como detalhe operacional. Várias tradições de pesquisa mostram que eles importam. O conceito de servicescape, de Bitner, mostrou como o ambiente afeta clientes e funcionários. A literatura de custos administrativos, de Herd e Moynihan, mostrou o peso que o Estado transfere ao cidadão quando o acesso é difícil. Nesses arranjos a norma vira prática, o trabalho se organiza e o cidadão forma sua experiência com o Estado.", "2 min. Na pesquisa de pós-doutorado, a primeira tarefa foi verificar o que a literatura já sabia. Foram quatro frentes de revisão bibliográfica e documental, com protocolo de revisão de escopo. O resultado aponta fragmentação. Na literatura de política judiciária, termos ligados à infraestrutura física ficam fora dos temas centrais. Esse resultado é reproduzível. Na literatura de implementação, poucos trabalhos tratam o espaço como variável ativa. Nas evidências empíricas, o conhecimento se concentra no trabalho dos servidores e deixa lacunas nas outras dimensões. Faço uma ressalva importante. Três desses resultados ainda são preliminares. Eles indicam um padrão. A medida exata depende de etapas de triagem em andamento.", "1 min. Este é o relatório do primeiro ano do pós-doutorado na ENAP, na linha de Governança e práticas de avaliação de políticas públicas, com supervisão da professora Regina Luna. O título resume o percurso: das arquiteturas judiciárias às arenas sociomateriais de implementação. A pesquisa começou pela infraestrutura dos tribunais e por uma escala de avaliação, a ARQJUD, desenvolvida no doutorado. Ao aprofundar o problema, a pergunta cresceu. Como espaços, tecnologias, normas e pessoas participam juntos da implementação? A resposta proposta é o framework ARENAS, depois ampliado pela literatura de governança regulatória.", "2 min. O conceito central é o de arena. Uma arena sociomaterial de implementação é uma configuração situada de atores, prescrições institucionais, espaços, artefatos, tecnologias e infraestruturas. É por meio dela que uma política é interpretada, executada, negociada e experimentada. Dois exemplos ajudam. Num mesmo fórum funcionam uma vara de família e um juizado especial. São duas arenas, porque são duas políticas, com práticas e pontos de contato próprios. Já um benefício pedido por aplicativo e validado num posto presencial forma uma arena só, porque o percurso do cidadão é único. A base teórica vem dos estudos de sociomaterialidade, de Orlikowski e de Leonardi.", "1 min 30 s. A arena tem cinco componentes. Atores: profissionais, cidadãos, gestores e intermediários. Prescrições: normas, regras e critérios. Materialidades: prédios, salas, balcões e documentos. Tecnologias: sistemas, plataformas e sinalização. Práticas: esperar, circular, atender, decidir, adaptar. O ponto principal está na relação entre eles. Uma norma de acessibilidade só existe de fato quando encontra rampa, sistema, servidor preparado e rotina de atendimento. Leonardi chama isso de imbricação. As decisões passadas se sedimentam na configuração e condicionam o presente.", "2 min 30 s. Como esses lugares participam da política? O framework propõe cinco mecanismos. O primeiro é a instrumentação: a norma vira arranjo concreto, como uma resolução de acessibilidade que vira rampa e sinalização tátil. Ou deixa de virar. O segundo é a mediação do trabalho: processos empilhados no corredor porque o arquivo fica em outro andar. O terceiro é a mediação da experiência. Tyler mostrou que as pessoas avaliam a justiça pela qualidade do tratamento recebido. Uma bancada muito elevada na sala de audiência reforça a distância. O quarto é a legibilidade: um tribunal sem sinalização obriga o cidadão a perguntar várias vezes. O quinto é a aprendizagem: erros recorrentes do sistema que nunca chegam a quem decide. Argyris e Schön chamariam isso de falha de aprendizagem organizacional. Cada mecanismo tem uma proposição testável.", "2 min. Um desses resultados conversa direto com decisões de gestão. Quando as transações rotineiras migram para o digital, o prédio recebe menos pessoas. Os atendimentos que permanecem presenciais tendem a ser mais complexos. Exigem mais coordenação, mais proteção e mais infraestrutura. A consequência é forte para quem administra. A ocupação média do prédio perde força como indicador de valor público. Isso afeta decisões sobre fechar unidades, reduzir áreas ou redesenhar o atendimento. Deixo claro que é uma proposição a testar. O desenho do teste já existe: acompanhar redes que digitalizaram em fases e medir a complexidade dos atendimentos antes e depois.", "2 min. Para levar o framework à prática, desenvolvi o Método ARENAS. Ele organiza o diagnóstico em seis lentes. Arranjo espacial. Rotinas de trabalho. Experiência. Navegabilidade. Aprendizagem. E sociomaterialidade, que costura as demais. O método segue um ciclo: observar, diagnosticar, redesenhar, testar e avaliar, aprender. Há um baralho de vinte e quatro cartas e um checklist bilíngue para conduzir oficinas. Torfing lembra que aprender exige espaços de diálogo com autonomia para agir. O método é um protótipo e ainda não foi testado em oficina. Gostaria muito de testá-lo com estudantes.", "3 min. Vamos usar o método agora. Imaginem um órgão que lançou um novo protocolo de atendimento. O fluxo foi redesenhado. A meta foi definida. A equipe foi comunicada. Três meses depois, o tempo de atendimento quase não mudou. Onde vocês investigariam? [Pausa. Ouvir respostas.] As lentes ajudam a organizar as hipóteses. A distribuição de pessoas e recursos mudou? O trabalho real seguiu o fluxo prescrito? Usuários e equipe entenderam a mudança? O percurso ficou mais claro? As falhas voltaram para quem decide? Essa é a lógica da gestão baseada em evidências, como defendem Briner, Denyer e Rousseau. Antes de trocar a regra de novo, investigue.", "2 min. Isso nos leva à terceira parte da tese. Pesquisa empírica é uma competência do administrador. Ela tem quatro elementos. Problema: enxergar além do sintoma. Método: organizar a investigação. Evidência: sustentar decisões. Comunicação: produzir autoridade técnica. Simon já defendia, em 1947, que administrar é decidir. Quem decide com evidência decide melhor. A pesquisa ensina a separar opinião, hipótese e evidência. A experiência profissional ganha força quando pode ser descrita, analisada e comunicada com método.", "2 min. Como começar? Seu local de trabalho já é um campo de pesquisa. Primeiro, observe. Que problema se repete no seu estágio ou no seu emprego? Segundo, registre. Anote casos, fluxos, reclamações e improvisos. Terceiro, meça. Quase toda organização já produz dados administrativos que ninguém analisa. Quarto, escreva. Transforme o achado em artigo, relatório ou proposta. Quem pesquisa o próprio trabalho decide melhor e se diferencia na carreira. Por isso defendo que a metodologia de pesquisa esteja presente na formação de todos os cursos.", "1 min 30 s. Deixo também um convite de campo. O sistema de Justiça também é organização e serviço público. Ali há temas de governança, produtividade, acessibilidade, inteligência artificial e dados, educação judicial e experiência do usuário. Sadek mostrou, há duas décadas, que o Judiciário passou a ser objeto de reforma e de política pública. Gomes e Guimarães consolidaram uma agenda de pesquisa sobre desempenho e administração da justiça. Para quem estuda Administração, é um campo cheio de problemas reais de gestão.", "1 min 30 s. Uma palavra sobre rigor. Na pesquisa, cada resultado tem um estágio. Proposição. Evidência preliminar. Manuscrito. Aceite. Publicação. Declarar o estágio de cada resultado protege a credibilidade. Hoje o ARENAS é uma formulação teórica fundamentada. O segundo ano do pós-doutorado abre o teste empírico das proposições e a validação dos instrumentos. Essa disciplina vale também para a gestão. O administrador que apresenta dados com o grau de certeza declarado ganha a confiança de quem decide.", "1 min 30 s. Para fechar o argumento. O administrador transforma decisões públicas em capacidade de entrega. Quatro perguntas resumem a palestra e servem para qualquer organização. Como a política foi traduzida? Que arena a implementa? Que evidências mostram o funcionamento real? Como a organização aprende com a experiência? Pressman e Wildavsky mostraram a distância entre decidir e executar. Lipsky mostrou que a política é feita na linha de frente. A Administração organiza essa passagem. A pesquisa empírica a torna visível e aperfeiçoável.", "1 min. Termino com um convite. Que pergunta o seu trabalho já está fazendo? A pesquisa empírica começa na observação atenta da prática. A Administração é um campo privilegiado para isso, porque vive no meio dos problemas reais. [Opcional:] Tenho interesse em ajudar a construir aqui um espaço de pesquisa com estudantes, em que problemas reais de gestão virem projetos de iniciação científica.", "30 s. Muito obrigado. No QR code estão os materiais e as referências da palestra. Fico à disposição para perguntas."];
-const slides=[...document.querySelectorAll('.slide')];
-const stage=document.getElementById('stage');
-let i=Math.max(0,Math.min(slides.length-1,(parseInt(location.hash.slice(1))||1)-1));
-function fit(){const s=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${s})`;}
-function show(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('active',k===i));
-document.getElementById('count').textContent=(i+1)+' / '+slides.length;document.getElementById('notes').textContent=NOTES[i]||'';history.replaceState(null,'','#'+(i+1));}
+const S=[{"img": "slide-01.jpg", "text": "O PAPEL DO ADMINISTRADOR NA IMPLEMENTAÇÃO DE POLÍTICAS PÚBLICAS · Igor Caires Machado · Analista Judiciário (CNJ) • Pós-doutorado (ENAP) · 07 de outubro de 2026  •  Curso de Administração  •  Brasília – DF · Da decisão pública à capacidade de entrega · Agradecimento à coordenação do curso Tema: implementação de políticas públicas Pesquisa empírica como ferramenta de carreira", "notes": "1 min. Boa noite. Agradeço à coordenação do curso de Administração pelo convite e a todos vocês pela presença. Hoje quero conversar sobre uma pergunta prática: como uma decisão pública chega até a vida das pessoas. O título fala do papel do administrador na implementação de políticas públicas. O subtítulo resume o percurso desta noite: da decisão pública à capacidade de entrega. No final, quero mostrar como a pesquisa empírica pode fortalecer a carreira de quem trabalha com gestão."}, {"img": "slide-02.jpg", "text": "TRAJETÓRIA · UFBA · 2007 Graduação em Arquitetura e Urbanismo · TJBA Liderança administrativa no Tribunal de Justiça da Bahia · UCES · 2024 Doutorado em Ciências Empresariais e Sociais, Buenos Aires · CNJ Analista Judiciário no Conselho Nacional de Justiça · ENAJU Coordenação de Desenvolvimento Educacional, Pesquisa e Inovação · ENAP · 2025–2026 Pós-doutorado em Governança e Avaliação de Políticas Públicas · Formação em arquitetura e urbanismo Gestão pública no TJBA, no CNJ e na ENAJU Doutorado na UCES e pós-doutorado na ENAP", "notes": "2 min. Antes de entrar no tema, uma breve apresentação. Minha formação inicial é em Arquitetura e Urbanismo, pela UFBA. A arquitetura me deu um olhar para o espaço que levo até hoje. Depois fui para a gestão pública. No Tribunal de Justiça da Bahia, atuei na liderança administrativa. Fiz o doutorado em Ciências Empresariais e Sociais na UCES, em Buenos Aires, com foco em desempenho organizacional. Hoje sou Analista Judiciário no Conselho Nacional de Justiça e coordeno a área de Desenvolvimento Educacional, Pesquisa e Inovação da ENAJU. Também faço pós-doutorado na ENAP, em Governança e Avaliação de Políticas Públicas. Conto isso por um motivo simples. Tudo o que vou apresentar nasceu de problemas reais de gestão. A pesquisa veio depois, para entender melhor esses problemas."}, {"img": "slide-03.jpg", "text": "UMA POLÍTICA BEM DESENHADA PODE TRAVAR NO BALCÃO · A norma está publicada. O orçamento existe. A comunicação foi feita. Mesmo assim, o cidadão chega ao atendimento e sai sem resolver. · Onde a política pública acontece? · DESTAQUE Uma política bem desenhada pode travar na execução. Pressman e Wildavsky (1973) mostraram a distância entre decidir e executar. · Política bem desenhada que trava no balcão Implementação como problema (Pressman; Wildavsky, 1973) Pergunta-guia: onde a política acontece?", "notes": "2 min. Começo com uma cena que todos conhecem. Uma política pública é bem desenhada. A norma está publicada. O orçamento existe. A comunicação foi feita. Mesmo assim, o cidadão chega ao atendimento e sai sem resolver. Não encontra a fila certa. Não acha a sala. Não entende o formulário. Quem aqui já passou por isso em um órgão público, num banco ou num hospital? [Pausa. Ouvir uma ou duas respostas.] Essa experiência levanta a pergunta que guia a palestra: onde a política pública acontece de fato? Pressman e Wildavsky mostraram, em 1973, que a distância entre decidir e executar é enorme. Essa distância é o território da Administração."}, {"img": "slide-04.jpg", "text": "A TESE · O administrador faz a política pública acontecer quando organiza o lugar em que ela encontra o cidadão. · 1 A implementação acontece em lugares concretos: balcões, sistemas, filas e formulários. · 2 Esses lugares podem ser lidos e redesenhados com método. · 3 A pesquisa empírica dá ao administrador essa capacidade. · A política acontece em lugares concretos Esses lugares podem ser lidos e redesenhados A pesquisa como capacidade do administrador", "notes": "2 min. Vou deixar a tese clara desde já. O administrador faz a política pública acontecer quando organiza o lugar em que ela encontra o cidadão. A tese tem três partes, e a palestra segue essa ordem. Primeiro: a implementação acontece em lugares concretos. Balcões, sistemas, filas, formulários. Segundo: esses lugares podem ser lidos e redesenhados com método. É aqui que apresento a minha pesquisa de pós-doutorado. Terceiro: a pesquisa empírica dá ao administrador essa capacidade. E isso faz diferença na carreira."}, {"img": "slide-05.jpg", "text": "ENTRE A DECISÃO E O RESULTADO HÁ UMA ORGANIZAÇÃO · 1 · Decisão pública · 2 · Capacidade organizacional · 3 · Entrega ao cidadão · O administrador coordena recursos, pessoas, rotinas, evidências e adaptações. · Organização e burocracia (Weber, 1999 [1922]) Decisão nas organizações (Simon, 1947) A política feita na linha de frente (Lipsky, 1980)", "notes": "2 min. Entre uma decisão pública e o resultado na vida das pessoas existe uma organização inteira. A decisão define a intenção. A entrega é o que o cidadão percebe. No meio está a capacidade organizacional: equipes, rotinas, sistemas, espaços, orçamento e informação. Weber descreveu a burocracia como a forma moderna de organizar essa capacidade. Simon mostrou que as organizações decidem o tempo todo, em cada nível, com informação limitada. Lipsky mostrou que boa parte da política é decidida na linha de frente, por quem atende. O administrador trabalha nesse degrau do meio. Ele coordena recursos, pessoas, rotinas, evidências e adaptações. É ali que a intenção vira funcionamento."}, {"img": "slide-06.jpg", "text": "ENTRE A DECISÃO E O RESULTADO EXISTE A EXECUÇÃO · Pressman e Wildavsky, 1973 A distância entre o que se decide em Washington e o que acontece em Oakland. · Lipsky, 1980 A política real é produzida na linha de frente, sob pressão de demanda e escassez de recursos. · Hill e Hupe, 2022 Organização, discricionariedade e condições institucionais moldam a ação pública. · É nesse intervalo que o administrador trabalha. · Decisão e execução (Pressman; Wildavsky, 1973) Linha de frente e discricionariedade (Lipsky, 1980) Condições institucionais (Hill; Hupe, 2022)", "notes": "2 min. O campo de estudos da implementação nasceu dessa constatação. Pressman e Wildavsky estudaram um programa federal de emprego aprovado em Washington. Na execução, em Oakland, ele se perdeu entre aprovações, atores e prazos. Lipsky, em 1980, olhou para o servidor da linha de frente: o professor, o policial, o assistente social. Ele mostrou que essas pessoas produzem a política real, sob pressão de demanda e com recursos escassos. Hill e Hupe organizaram o campo e mostraram como organização, discricionariedade e condições institucionais moldam a ação pública. A conclusão para nós é direta. Decidir é só o começo. Execução é gestão. E gestão é o trabalho do administrador."}, {"img": "slide-07.jpg", "text": "IMPLEMENTAR É TRADUZIR · Prescrições institucionais precisam assumir formas concretas em práticas situadas. · normas · processos · sistemas · espaços · rotinas · decisões de linha de frente · Traduzir envolve interpretação, adaptação e coordenação. Por isso a mesma política gera experiências diferentes em unidades diferentes. · Instrumentos de política (Lascoumes; Le Galès, 2007) Discricionariedade na linha de frente (Lipsky, 1980) Mesma política, experiências diferentes", "notes": "1 min 30 s. Implementar é traduzir. Uma norma precisa virar processo, sistema, espaço, rotina e decisão de linha de frente. Toda tradução envolve interpretação, adaptação e alguma perda. Lascoumes e Le Galès mostram que os instrumentos de política organizam relações e produzem efeitos próprios. Por isso a mesma política gera experiências diferentes em unidades diferentes. Pensem em duas agências do mesmo banco, com as mesmas regras. Uma funciona bem. A outra vive com fila e reclamação. A regra é a mesma. A tradução foi diferente."}, {"img": "slide-08.jpg", "text": "A POLÍTICA GANHA FORMA EM LUGARES CONCRETOS · Balcões · Salas de atendimento · Formulários · Sistemas · Filas · Interfaces · Corredores · Plataformas · Nesses arranjos, a norma vira prática, o trabalho se organiza e o cidadão forma sua experiência com o Estado. · Ambiente e serviço: servicescape (Bitner, 1992) Custos administrativos (Herd; Moynihan, 2019) Instrumentos de política (Lascoumes; Le Galès, 2007)", "notes": "1 min 30 s. Se a política é traduzida, ela ganha forma em algum lugar. Balcões, salas de atendimento, formulários, sistemas, filas, interfaces, corredores, plataformas. Esses lugares costumam ser tratados como detalhe operacional. Várias tradições de pesquisa mostram que eles importam. O conceito de servicescape, de Bitner, mostrou como o ambiente afeta clientes e funcionários. A literatura de custos administrativos, de Herd e Moynihan, mostrou o peso que o Estado transfere ao cidadão quando o acesso é difícil. Nesses arranjos a norma vira prática, o trabalho se organiza e o cidadão forma sua experiência com o Estado."}, {"img": "slide-09.jpg", "text": "A LITERATURA TRATA O ESPAÇO DE FORMA FRAGMENTADA · Frente de estudo · O que indicou · Estágio · Política judiciária · Termos de infraestrutura física ausentes dos núcleos temáticos da literatura · Resultado reproduzível · Implementação · Proporção muito baixa de trabalhos que tratam o espaço como variável ativa · Preliminar · Evidências empíricas · Evidência densa só no trabalho dos servidores, com lacunas nas demais dimensões · Preliminar · Sociomaterialidade · Ligação escassa com o espaço dos serviços públicos · Preliminar · Revisão de escopo (Tricco et al., 2018) Dispersão entre periódicos (Bradford, 1934) Formação de um campo científico (Whitley, 1984)", "notes": "2 min. Na pesquisa de pós-doutorado, a primeira tarefa foi verificar o que a literatura já sabia. Foram quatro frentes de revisão bibliográfica e documental, com protocolo de revisão de escopo. O resultado aponta fragmentação. Na literatura de política judiciária, termos ligados à infraestrutura física ficam fora dos temas centrais. Esse resultado é reproduzível. Na literatura de implementação, poucos trabalhos tratam o espaço como variável ativa. Nas evidências empíricas, o conhecimento se concentra no trabalho dos servidores e deixa lacunas nas outras dimensões. Faço uma ressalva importante. Três desses resultados ainda são preliminares. Eles indicam um padrão. A medida exata depende de etapas de triagem em andamento."}, {"img": "slide-10.jpg", "text": "A PESQUISA DE PÓS-DOUTORADO · PESQUISA DE PÓS-DOUTORADO · ENAP Das arquiteturas judiciárias às arenas sociomateriais de implementação Desenvolvimento do framework ARENAS e sua ampliação pela governança regulatória. Linha de Governança e práticas de avaliação de políticas públicas. Supervisão da Prof.ª Dr.ª Regina Luna Santos de Souza. · Origem: arquitetura judiciária e escala ARQJUD O framework ARENAS e sua operacionalização Ampliação pela governança regulatória", "notes": "1 min. Este é o relatório do primeiro ano do pós-doutorado na ENAP, na linha de Governança e práticas de avaliação de políticas públicas, com supervisão da professora Regina Luna. O título resume o percurso: das arquiteturas judiciárias às arenas sociomateriais de implementação. A pesquisa começou pela infraestrutura dos tribunais e por uma escala de avaliação, a ARQJUD, desenvolvida no doutorado. Ao aprofundar o problema, a pergunta cresceu. Como espaços, tecnologias, normas e pessoas participam juntos da implementação? A resposta proposta é o framework ARENAS, depois ampliado pela literatura de governança regulatória."}, {"img": "slide-11.jpg", "text": "O CONCEITO DE ARENA · Uma arena sociomaterial de implementação é uma configuração situada de atores, prescrições institucionais, espaços, artefatos, tecnologias e infraestruturas por meio da qual uma política pública é interpretada, executada, negociada e experimentada. · Um prédio pode conter várias arenas. Uma arena pode atravessar prédios, plataformas e documentos. · Sociomaterialidade nas organizações (Orlikowski, 2007) Imbricação entre humano e material (Leonardi, 2011) Como delimitar uma arena: política e ponto de contato", "notes": "2 min. O conceito central é o de arena. Uma arena sociomaterial de implementação é uma configuração situada de atores, prescrições institucionais, espaços, artefatos, tecnologias e infraestruturas. É por meio dela que uma política é interpretada, executada, negociada e experimentada. Dois exemplos ajudam. Num mesmo fórum funcionam uma vara de família e um juizado especial. São duas arenas, porque são duas políticas, com práticas e pontos de contato próprios. Já um benefício pedido por aplicativo e validado num posto presencial forma uma arena só, porque o percurso do cidadão é único. A base teórica vem dos estudos de sociomaterialidade, de Orlikowski e de Leonardi."}, {"img": "slide-12.jpg", "text": "CINCO COMPONENTES FORMAM A ARENA · Atores Profissionais, cidadãos, gestores, intermediários · Prescrições Normas, regras, procedimentos, critérios de elegibilidade · Materialidades Edifícios, salas, balcões, mobiliário, documentos · Tecnologias Plataformas, sistemas, formulários, sinalização · Práticas Esperar, circular, atender, decidir, adaptar · Um componente isolado não forma uma arena. O objeto de análise é o entrelaçamento. · Cinco grupos relacionais do framework Mediação por artefatos (Engeström, 2001) Configurações que se sedimentam (Leonardi, 2011)", "notes": "1 min 30 s. A arena tem cinco componentes. Atores: profissionais, cidadãos, gestores e intermediários. Prescrições: normas, regras e critérios. Materialidades: prédios, salas, balcões e documentos. Tecnologias: sistemas, plataformas e sinalização. Práticas: esperar, circular, atender, decidir, adaptar. O ponto principal está na relação entre eles. Uma norma de acessibilidade só existe de fato quando encontra rampa, sistema, servidor preparado e rotina de atendimento. Leonardi chama isso de imbricação. As decisões passadas se sedimentam na configuração e condicionam o presente."}, {"img": "slide-13.jpg", "text": "CINCO MECANISMOS, COM EXEMPLOS DO JUDICIÁRIO · Mecanismo · Pergunta · Exemplo no Judiciário · M1 · Instrumentação · Como a norma vira arranjo concreto? · Resolução de acessibilidade que vira, ou não, rampa e sinalização tátil · M2 · Mediação do trabalho · Como o arranjo organiza o trabalho? · Processos empilhados no corredor porque o arquivo fica em outro andar · M3 · Mediação da experiência · Como o lugar afeta a percepção de tratamento justo? · Bancada elevada na sala de audiência reforça a distância institucional · M4 · Legibilidade · A instituição é compreensível para quem chega? · Tribunal sem sinalização obriga o cidadão a perguntar várias vezes · M5 · Aprendizagem · As fricções chegam a quem decide? · Erros recorrentes do sistema eletrônico nunca notificados à gestão · Norma que vira arranjo (Lascoumes; Le Galès, 2007) Justiça procedimental (Tyler, 2003) Aprendizagem organizacional (Argyris; Schön, 1978)", "notes": "2 min 30 s. Como esses lugares participam da política? O framework propõe cinco mecanismos. O primeiro é a instrumentação: a norma vira arranjo concreto, como uma resolução de acessibilidade que vira rampa e sinalização tátil. Ou deixa de virar. O segundo é a mediação do trabalho: processos empilhados no corredor porque o arquivo fica em outro andar. O terceiro é a mediação da experiência. Tyler mostrou que as pessoas avaliam a justiça pela qualidade do tratamento recebido. Uma bancada muito elevada na sala de audiência reforça a distância. O quarto é a legibilidade: um tribunal sem sinalização obriga o cidadão a perguntar várias vezes. O quinto é a aprendizagem: erros recorrentes do sistema que nunca chegam a quem decide. Argyris e Schön chamariam isso de falha de aprendizagem organizacional. Cada mecanismo tem uma proposição testável."}, {"img": "slide-14.jpg", "text": "UM ACHADO PARA O GESTOR · PROPOSIÇÃO A TESTAR A digitalização redistribui a materialidade da política pública. Quando as transações rotineiras migram para o digital, o prédio recebe menos pessoas. Os atendimentos que permanecem presenciais tendem a exigir mais coordenação, proteção e infraestrutura. Consequência: a ocupação média perde força como indicador de valor público. · Digitalização e encontros complexos Custos para o cidadão (Christensen et al., 2020) Ocupação média como indicador de valor público", "notes": "2 min. Um desses resultados conversa direto com decisões de gestão. Quando as transações rotineiras migram para o digital, o prédio recebe menos pessoas. Os atendimentos que permanecem presenciais tendem a ser mais complexos. Exigem mais coordenação, mais proteção e mais infraestrutura. A consequência é forte para quem administra. A ocupação média do prédio perde força como indicador de valor público. Isso afeta decisões sobre fechar unidades, reduzir áreas ou redesenhar o atendimento. Deixo claro que é uma proposição a testar. O desenho do teste já existe: acompanhar redes que digitalizaram em fases e medir a complexidade dos atendimentos antes e depois."}, {"img": "slide-15.jpg", "text": "MÉTODO ARENAS: SEIS LENTES DE DIAGNÓSTICO · A   Arranjo espacial · R   Rotinas de trabalho · E   Experiência · N   Navegabilidade · A   Aprendizagem · S   Sociomaterialidade · Observar · Diagnosticar · Redesenhar · Testar e avaliar · Aprender · Protótipo com baralho de 24 cartas, checklist bilíngue e ciclo de aplicação em cinco passos. · Seis lentes de diagnóstico Ciclo: observar, diagnosticar, redesenhar Gestão baseada em confiança (Torfing, 2023)", "notes": "2 min. Para levar o framework à prática, desenvolvi o Método ARENAS. Ele organiza o diagnóstico em seis lentes. Arranjo espacial. Rotinas de trabalho. Experiência. Navegabilidade. Aprendizagem. E sociomaterialidade, que costura as demais. O método segue um ciclo: observar, diagnosticar, redesenhar, testar e avaliar, aprender. Há um baralho de vinte e quatro cartas e um checklist bilíngue para conduzir oficinas. Torfing lembra que aprender exige espaços de diálogo com autonomia para agir. O método é um protótipo e ainda não foi testado em oficina. Gostaria muito de testá-lo com estudantes."}, {"img": "slide-16.jpg", "text": "EXEMPLO: NOVO PROTOCOLO DE ATENDIMENTO · O fluxo foi redesenhado, a meta foi definida e a equipe foi comunicada. Após três meses, o tempo de atendimento pouco mudou. Onde investigar? · Arranjo A distribuição de pessoas e recursos mudou? · Rotinas O trabalho real seguiu o fluxo prescrito? · Experiência Usuários e equipe compreenderam a mudança? · Navegabilidade O percurso ficou mais claro? · Aprendizagem As falhas voltaram para quem decide? · A regra mudou e o resultado ficou parecido Investigar pelas lentes do Método ARENAS Gestão baseada em evidências (Briner; Denyer; Rousseau, 2009)", "notes": "3 min. Vamos usar o método agora. Imaginem um órgão que lançou um novo protocolo de atendimento. O fluxo foi redesenhado. A meta foi definida. A equipe foi comunicada. Três meses depois, o tempo de atendimento quase não mudou. Onde vocês investigariam? [Pausa. Ouvir respostas.] As lentes ajudam a organizar as hipóteses. A distribuição de pessoas e recursos mudou? O trabalho real seguiu o fluxo prescrito? Usuários e equipe entenderam a mudança? O percurso ficou mais claro? As falhas voltaram para quem decide? Essa é a lógica da gestão baseada em evidências, como defendem Briner, Denyer e Rousseau. Antes de trocar a regra de novo, investigue."}, {"img": "slide-17.jpg", "text": "PESQUISA EMPÍRICA COMO COMPETÊNCIA · Problema Enxergar além do sintoma · Método Organizar a investigação · Evidência Sustentar decisões · Comunicação Produzir autoridade técnica · A experiência profissional ganha força quando pode ser descrita, analisada e comunicada com método. · Separar opinião, hipótese e evidência Gestão baseada em evidências (Briner; Denyer; Rousseau, 2009) Comportamento administrativo (Simon, 1947)", "notes": "2 min. Isso nos leva à terceira parte da tese. Pesquisa empírica é uma competência do administrador. Ela tem quatro elementos. Problema: enxergar além do sintoma. Método: organizar a investigação. Evidência: sustentar decisões. Comunicação: produzir autoridade técnica. Simon já defendia, em 1947, que administrar é decidir. Quem decide com evidência decide melhor. A pesquisa ensina a separar opinião, hipótese e evidência. A experiência profissional ganha força quando pode ser descrita, analisada e comunicada com método."}, {"img": "slide-18.jpg", "text": "SEU LOCAL DE TRABALHO É UM CAMPO DE PESQUISA · 1 Observe Que problema se repete no seu trabalho? · 2 Registre Anote casos, fluxos, reclamações e improvisos. · 3 Meça Use os dados administrativos que já existem. · 4 Escreva Transforme o achado em artigo, relatório ou proposta. · Quem pesquisa o próprio trabalho decide melhor e se diferencia na carreira. · O local de trabalho como campo de pesquisa Dados administrativos como fonte de evidência Do achado ao artigo, ao relatório ou à proposta", "notes": "2 min. Como começar? Seu local de trabalho já é um campo de pesquisa. Primeiro, observe. Que problema se repete no seu estágio ou no seu emprego? Segundo, registre. Anote casos, fluxos, reclamações e improvisos. Terceiro, meça. Quase toda organização já produz dados administrativos que ninguém analisa. Quarto, escreva. Transforme o achado em artigo, relatório ou proposta. Quem pesquisa o próprio trabalho decide melhor e se diferencia na carreira. Por isso defendo que a metodologia de pesquisa esteja presente na formação de todos os cursos."}, {"img": "slide-19.jpg", "text": "A JUSTIÇA TAMBÉM É SERVIÇO PÚBLICO · Governança · Produtividade · Acessibilidade · IA e dados · Educação judicial · Experiência do usuário · Muitos temas do Judiciário são problemas de gestão, pessoas, dados, aprendizagem e entrega de serviço. · O Judiciário como objeto de reforma (Sadek, 2004) Desempenho e administração da justiça (Gomes; Guimarães, 2013) Temas de pesquisa para a Administração", "notes": "1 min 30 s. Deixo também um convite de campo. O sistema de Justiça também é organização e serviço público. Ali há temas de governança, produtividade, acessibilidade, inteligência artificial e dados, educação judicial e experiência do usuário. Sadek mostrou, há duas décadas, que o Judiciário passou a ser objeto de reforma e de política pública. Gomes e Guimarães consolidaram uma agenda de pesquisa sobre desempenho e administração da justiça. Para quem estuda Administração, é um campo cheio de problemas reais de gestão."}, {"img": "slide-20.jpg", "text": "CADA RESULTADO NO SEU ESTÁGIO DE MATURIDADE · Proposição · Evidência preliminar · Manuscrito · Aceite · Publicação · Hoje o ARENAS é uma formulação teórica fundamentada. O segundo ano abre o teste empírico das proposições e a validação dos instrumentos. · Estágios de maturidade da evidência Proposições falsificáveis e hipóteses rivais Agenda empírica do segundo ano", "notes": "1 min 30 s. Uma palavra sobre rigor. Na pesquisa, cada resultado tem um estágio. Proposição. Evidência preliminar. Manuscrito. Aceite. Publicação. Declarar o estágio de cada resultado protege a credibilidade. Hoje o ARENAS é uma formulação teórica fundamentada. O segundo ano do pós-doutorado abre o teste empírico das proposições e a validação dos instrumentos. Essa disciplina vale também para a gestão. O administrador que apresenta dados com o grau de certeza declarado ganha a confiança de quem decide."}, {"img": "slide-21.jpg", "text": "SÍNTESE · O administrador transforma decisões públicas em capacidade de entrega. · 1   Como a política foi traduzida? · 2   Que arena a implementa? · 3   Que evidências mostram o funcionamento real? · 4   Como a organização aprende com a experiência? · Retomada da tese Da decisão à execução (Pressman; Wildavsky, 1973) A política feita na linha de frente (Lipsky, 1980)", "notes": "1 min 30 s. Para fechar o argumento. O administrador transforma decisões públicas em capacidade de entrega. Quatro perguntas resumem a palestra e servem para qualquer organização. Como a política foi traduzida? Que arena a implementa? Que evidências mostram o funcionamento real? Como a organização aprende com a experiência? Pressman e Wildavsky mostraram a distância entre decidir e executar. Lipsky mostrou que a política é feita na linha de frente. A Administração organiza essa passagem. A pesquisa empírica a torna visível e aperfeiçoável."}, {"img": "slide-22.jpg", "text": "UM CONVITE · Que pergunta o seu trabalho já está fazendo? · A pesquisa empírica começa na observação atenta da prática. A Administração é um campo privilegiado para isso. · CONVITE Problemas reais de gestão podem virar projetos de iniciação científica. · A observação atenta da prática Pesquisa no currículo de Administração Iniciação científica com problemas reais", "notes": "1 min. Termino com um convite. Que pergunta o seu trabalho já está fazendo? A pesquisa empírica começa na observação atenta da prática. A Administração é um campo privilegiado para isso, porque vive no meio dos problemas reais. [Opcional:] Tenho interesse em ajudar a construir aqui um espaço de pesquisa com estudantes, em que problemas reais de gestão virem projetos de iniciação científica."}, {"img": "slide-23.jpg", "text": "OBRIGADO! · Conhecimento que transforma. · Igor Caires Machado  •  cairesmachado-svg.github.io/Site_hub · IV CONGRESSO CIENTÍFICO · ANHANGUERA ASA NORTE  •  06 E 07 DE OUTUBRO DE 2026 · ciência • inovação • compromisso com a sociedade · Materiais e referências", "notes": "30 s. Muito obrigado. No QR code estão os materiais e as referências da palestra. Fico à disposição para perguntas."}];
+const img=document.getElementById('slide'),cap=document.getElementById('cap'),notes=document.getElementById('notes');
+let i=Math.max(0,Math.min(S.length-1,(parseInt(location.hash.slice(1))||1)-1));
+S.forEach(s=>{const p=new Image();p.src=s.img});
+function show(n){i=Math.max(0,Math.min(S.length-1,n));img.src=S[i].img;img.alt='Slide '+(i+1)+': '+S[i].text;cap.textContent=S[i].text;
+notes.textContent=S[i].notes;document.getElementById('count').textContent=(i+1)+' / '+S.length;
+document.getElementById('bar').style.width=((i+1)/S.length*100)+'%';history.replaceState(null,'','#'+(i+1));}
+function toggleNotes(){const on=document.body.classList.toggle('show-notes');document.getElementById('nbtn').setAttribute('aria-pressed',on)}
+function toggleFs(){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen().catch(()=>{})}
+document.addEventListener('fullscreenchange',()=>document.body.classList.toggle('fs',!!document.fullscreenElement));
 addEventListener('keydown',e=>{
  if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(i+1)}
  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(i-1)}
- else if(e.key==='Home')show(0); else if(e.key==='End')show(slides.length-1);
- else if(e.key.toLowerCase()==='n')document.body.classList.toggle('show-notes');
- else if(e.key.toLowerCase()==='f')toggleFs();});
-function toggleFs(){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}
+ else if(e.key==='Home')show(0); else if(e.key==='End')show(S.length-1);
+ else if(e.key.toLowerCase()==='n')toggleNotes(); else if(e.key.toLowerCase()==='f')toggleFs();});
 document.getElementById('prev').onclick=()=>show(i-1);document.getElementById('next').onclick=()=>show(i+1);
-document.getElementById('nbtn').onclick=()=>document.body.classList.toggle('show-notes');document.getElementById('fbtn').onclick=toggleFs;
-let tx=null;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(i+(d<0?1:-1));tx=null});
-addEventListener('resize',fit);fit();show(i);
+document.getElementById('nbtn').onclick=toggleNotes;document.getElementById('fbtn').onclick=toggleFs;
+img.onclick=e=>{const r=img.getBoundingClientRect();show(i+(e.clientX-r.left<r.width/3?-1:1))};
+let tx=null;addEventListener('touchstart',e=>tx=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(i+(d<0?1:-1));tx=null});
+show(i);
 </script>
 </body>
 </html>

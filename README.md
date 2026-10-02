@@ -1,32 +1,25 @@
-# O Papel do Administrador na Implementação de Políticas Públicas
+# O papel do administrador na implementação de políticas públicas
 
-Slides da palestra de Igor Caires Machado no IV Congresso Científico da Faculdade Anhanguera Asa Norte, 07 de outubro de 2026.
+Palestra de Igor Caires Machado no IV Congresso Científico da Faculdade Anhanguera Asa Norte, 07 de outubro de 2026.
+
+Site: https://cnj-proj-icm.github.io/apresenta-o-anhanguera/
+
+## Arquivos
+
+- `index.html`: apresentação online, no template oficial do congresso
+- `slide-01.jpg` a `slide-23.jpg`: os slides
+- `Palestra_Igor_Caires_Machado_IV_Congresso.pdf` e `.pptx`: versões para download
+- `versao-anterior.html`: versão web anterior, com o visual próprio
+
+Todos os arquivos ficam na raiz do repositório, lado a lado.
 
 ## Publicar no GitHub Pages
 
-1. Envie `index.html` e todas as imagens (`.jpg` e `.png`) para a raiz do repositório, lado a lado.
-2. Inclua também o arquivo `.nojekyll`.
-3. No repositório, abra **Settings > Pages**.
-4. Em **Build and deployment**, escolha **Deploy from a branch**, branch `main` e pasta `/ (root)`. Salve.
-5. Em um ou dois minutos o site estará em `https://cnj-proj-icm.github.io/apresenta-o-anhanguera/`.
-
-Pela linha de comando:
-
-```bash
-git init
-git add .
-git commit -m "Slides da palestra"
-git branch -M main
-git remote add origin https://github.com/cnj-proj-icm/apresenta-o-anhanguera.git
-git push -u origin main
-```
+Em **Settings > Pages**, escolha **Deploy from a branch**, branch `main`, pasta `/ (root)`.
 
 ## Como apresentar
 
-- Setas ou espaço: avançar e voltar
+- Setas, espaço ou clique na imagem: avançar e voltar
 - `F`: tela cheia
-- `N`: mostrar ou esconder as notas do apresentador
+- `N`: notas de fala
 - `#5` no fim do endereço abre direto o slide 5
-- Para gerar PDF: imprimir no Chrome, destino "Salvar como PDF", margens "Nenhuma", com gráficos de fundo ativados
-
-As fontes (Oswald e Public Sans) vêm do Google Fonts, então a apresentação precisa de internet para manter a tipografia.
