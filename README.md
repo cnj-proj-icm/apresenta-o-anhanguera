@@ -7,7 +7,7 @@ Site: https://cnj-proj-icm.github.io/apresenta-o-anhanguera/
 ## Arquivos
 
 - `index.html`: apresentação online, no template oficial do congresso
-- `slide-01.jpg` a `slide-23.jpg`: os slides
+- `slide-01.jpg` a `slide-18.jpg`: os slides
 - `Palestra_Igor_Caires_Machado_IV_Congresso.pdf` e `.pptx`: versões para download
 - `versao-anterior.html`: versão web anterior, com o visual próprio
 
